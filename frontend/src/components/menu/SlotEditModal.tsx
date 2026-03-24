@@ -75,6 +75,7 @@ export function SlotEditModal({ row, weekStart, weekRows, onClose, onApply, onRe
   const [applying, setApplying] = useState(false)
   const [removing, setRemoving] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [loadError, setLoadError] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
 
   // Build map: dish_id → [{menu_date, slot}] for dishes used in OTHER slots this week
@@ -93,38 +94,45 @@ export function SlotEditModal({ row, weekStart, weekRows, onClose, onApply, onRe
   useEffect(() => {
     if (!row) return
     setLoading(true)
+    setLoadError(false)
     setSearchQuery('')
     setSelectedDish(null)
-    fetchDishesBySlot(row.slot, row.menu_date, row.menu_date, row.slot).then((dishes) => {
-      setSlotDishes(dishes)
+    fetchDishesBySlot(row.slot, row.menu_date, row.menu_date, row.slot)
+      .then((dishes) => {
+        setSlotDishes(dishes)
 
-      // Separate: available (not in week) vs taken (in week, different slot)
-      // Exclude current dish from both (shown separately as "platillo actual")
-      const available: Dish[] = []
-      const taken: Dish[] = []
-      dishes.forEach((d) => {
-        if (d.id === row.dish_id) return // current dish — shown in "platillo actual"
-        if (takenUsageMap.has(d.id)) {
-          taken.push(d)
-        } else {
-          available.push(d)
-        }
-      })
-
-      // Sort available: priority dishes for this day first
-      const tag = priorityTagForDate(row.menu_date, row.slot)
-      if (tag) {
-        available.sort((a, b) => {
-          const pa = isDishPriority(a, tag) ? 0 : 1
-          const pb = isDishPriority(b, tag) ? 0 : 1
-          return pa - pb
+        // Separate: available (not in week) vs taken (in week, different slot)
+        // Exclude current dish from both (shown separately as "platillo actual")
+        const available: Dish[] = []
+        const taken: Dish[] = []
+        dishes.forEach((d) => {
+          if (d.id === row.dish_id) return // current dish — shown in "platillo actual"
+          if (takenUsageMap.has(d.id)) {
+            taken.push(d)
+          } else {
+            available.push(d)
+          }
         })
-      }
 
-      setAllDishes(available)
-      setTakenDishes(taken)
-      setLoading(false)
-    })
+        // Sort available: priority dishes for this day first
+        const tag = priorityTagForDate(row.menu_date, row.slot)
+        if (tag) {
+          available.sort((a, b) => {
+            const pa = isDishPriority(a, tag) ? 0 : 1
+            const pb = isDishPriority(b, tag) ? 0 : 1
+            return pa - pb
+          })
+        }
+
+        setAllDishes(available)
+        setTakenDishes(taken)
+      })
+      .catch(() => {
+        setLoadError(true)
+      })
+      .finally(() => {
+        setLoading(false)
+      })
     setTimeout(() => inputRef.current?.focus(), 100)
   }, [row, weekRows])
 
@@ -149,6 +157,8 @@ export function SlotEditModal({ row, weekStart, weekRows, onClose, onApply, onRe
     try {
       await onApply(row.menu_date, row.slot, selectedDish.id)
       onClose()
+    } catch {
+      // El error ya fue mostrado como toast en MenuPage; el modal se queda abierto
     } finally {
       setApplying(false)
     }
@@ -160,6 +170,8 @@ export function SlotEditModal({ row, weekStart, weekRows, onClose, onApply, onRe
     try {
       await onRemoveOverride(row.menu_date, row.slot)
       onClose()
+    } catch {
+      // El error ya fue mostrado como toast en MenuPage; el modal se queda abierto
     } finally {
       setRemoving(false)
     }
@@ -279,7 +291,12 @@ export function SlotEditModal({ row, weekStart, weekRows, onClose, onApply, onRe
           {loading && (
             <div className="px-4 py-6 text-center text-sm text-warm-400">Cargando platillos...</div>
           )}
-          {!loading && filtered.length === 0 && filteredTaken.length === 0 && (
+          {!loading && loadError && (
+            <div className="px-4 py-6 text-center text-sm text-red-500">
+              Error al cargar platillos. Verifica la conexión con el servidor.
+            </div>
+          )}
+          {!loading && !loadError && filtered.length === 0 && filteredTaken.length === 0 && (
             <div className="px-4 py-6 text-center text-sm text-warm-400">
               {searchQuery ? `Sin resultados para "${searchQuery}"` : 'No hay platillos disponibles.'}
             </div>

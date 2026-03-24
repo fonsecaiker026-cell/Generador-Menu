@@ -92,8 +92,12 @@ export function MenuPage() {
   }, [showToast])
 
   const loadWeekList = useCallback(async () => {
-    const list = await fetchWeekList()
-    setWeekList(list)
+    try {
+      const list = await fetchWeekList()
+      setWeekList(list)
+    } catch {
+      // No crítico — la navegación de semanas sigue funcionando
+    }
   }, [])
 
   // Load on first render
@@ -230,20 +234,30 @@ export function MenuPage() {
 
   // Override: apply immediately
   const handleApplyOverride = async (menuDate: string, slot: string, forcedDishId: number) => {
-    const { weekData, conflictsResolved } = await applyOverrideNow(weekStart, menuDate, slot, forcedDishId)
-    setWeekData(weekData)
-    if (conflictsResolved.length > 0) {
-      showToast(`Override aplicado. ${conflictsResolved.length} slot${conflictsResolved.length > 1 ? 's regenerados' : ' regenerado'} por conflicto.`, 'success')
-    } else {
-      showToast('Override aplicado', 'success')
+    try {
+      const { weekData, conflictsResolved } = await applyOverrideNow(weekStart, menuDate, slot, forcedDishId)
+      setWeekData(weekData)
+      if (conflictsResolved.length > 0) {
+        showToast(`Override aplicado. ${conflictsResolved.length} slot${conflictsResolved.length > 1 ? 's regenerados' : ' regenerado'} por conflicto.`, 'success')
+      } else {
+        showToast('Override aplicado', 'success')
+      }
+    } catch (err) {
+      showToast('Error al aplicar override: ' + getApiError(err), 'error')
+      throw err // Re-lanza para que el modal sepa que falló y no se cierre
     }
   }
 
   // Remove override — recomputes slot immediately, no regeneration needed
   const handleRemoveOverride = async (menuDate: string, slot: string) => {
-    const data = await removeOverride(menuDate, slot, weekStart)
-    setWeekData(data)
-    showToast('Override eliminado', 'info')
+    try {
+      const data = await removeOverride(menuDate, slot, weekStart)
+      setWeekData(data)
+      showToast('Override eliminado', 'info')
+    } catch (err) {
+      showToast('Error al quitar override: ' + getApiError(err), 'error')
+      throw err // Re-lanza para que el modal sepa que falló y no se cierre
+    }
   }
 
   // Export (mock)
