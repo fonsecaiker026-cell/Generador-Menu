@@ -69,6 +69,7 @@ export function MenuPage() {
   const [generating, setGenerating] = useState(false)
   const [regenerating, setRegenerating] = useState(false)
   const [finalizing, setFinalizing] = useState(false)
+  const [exportingPdf, setExportingPdf] = useState(false)
 
   // Confirms
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState(false)
@@ -260,16 +261,41 @@ export function MenuPage() {
     }
   }
 
-  // Export (mock)
-  const handleExportPDF = () => {
+  const handleExportPDF = async () => {
     if (!isFinalized) {
       showToast('Primero finaliza la semana para exportar PDF', 'info')
       return
     }
     if (isMockMode) {
       showToast('PDF disponible con el backend conectado', 'info')
-    } else {
-      window.open(`/api/weeks/${weekStart}/pdf`, '_blank')
+      return
+    }
+    setExportingPdf(true)
+    try {
+      const res = await fetch(`/api/weeks/${weekStart}/pdf`)
+      if (!res.ok) {
+        let msg = 'Error al generar el PDF'
+        try {
+          const body = await res.json()
+          if (body?.detail) msg = body.detail
+        } catch { /* no-op */ }
+        showToast(msg, 'error')
+        return
+      }
+      const blob = await res.blob()
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = `menu_${weekStart}.pdf`
+      document.body.appendChild(a)
+      a.click()
+      a.remove()
+      URL.revokeObjectURL(url)
+      showToast('PDF descargado', 'success')
+    } catch {
+      showToast('No se pudo descargar el PDF. Verifica que el sistema esté activo.', 'error')
+    } finally {
+      setExportingPdf(false)
     }
   }
 
@@ -419,6 +445,7 @@ export function MenuPage() {
                 icon={<FileText className="w-3.5 h-3.5" />}
                 onClick={handleExportPDF}
                 disabled={!isFinalized}
+                loading={exportingPdf}
               >
                 PDF
               </Button>

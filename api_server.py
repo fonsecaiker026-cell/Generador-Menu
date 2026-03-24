@@ -437,6 +437,8 @@ def api_export_pdf(week_start: str, background_tasks: BackgroundTasks):
         )
     except RuntimeError as e:
         raise HTTPException(status_code=422, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error interno al generar PDF: {e}")
 
 
 @app.get("/api/weeks/{week_start}/csv")
@@ -455,6 +457,8 @@ def api_export_csv(week_start: str, background_tasks: BackgroundTasks):
         )
     except RuntimeError as e:
         raise HTTPException(status_code=422, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error interno al generar CSV: {e}")
 
 
 # ─── Override endpoints ───────────────────────────────────────
