@@ -1,0 +1,910 @@
+name,course_group,protein,style_tag,active
+
+Sopa de Pasta,sopa,none,sopa_pasta,1
+Sopa de Cebolla,sopa,none,sopa_cebolla,1
+Sopa de Papa,sopa,none,sopa_papa,1
+Sopa Minestrone,sopa,none,sopa_minestrone,1
+Sopa de Fideo con Frijol,sopa,none,sopa_fideo_frijol,1
+Sopa de Lentejas,sopa,none,sopa_lentejas,1
+Sopa de Ajo,sopa,none,sopa_ajo,1
+Sopa Azteca,sopa,none,sopa_azteca,1
+Sopa de Espinaca,sopa,none,sopa_espinaca,1
+Sopa de Haba,sopa,none,sopa_haba,1
+Sopa Alemana,sopa,none,sopa_alemana,1
+Sopa de Setas,sopa,none,sopa_setas,1
+Sopa de Pasta con Menudencias,sopa,pollo,sopa_pasta_menudencias,1
+Sopa Lima,sopa,pollo,sopa_lima,1
+Sopa de Tortilla,sopa,none,sopa_tortilla,1
+Sopa Tarasca,sopa,none,sopa_tarasca,1
+Sopa de Verduras,sopa,none,sopa_verduras,1
+Sopa Campesina,sopa,none,sopa_campesina,1
+Sopa de Champiñón con Guajillo,sopa,none,sopa_champinon_guajillo,1
+Sopa de Pasta con Espinaca,sopa,none,sopa_pasta_espinaca,1
+Sopa de Médula,sopa,res,sopa_medula,1
+Sopa de Fideo con Espinaca,sopa,none,sopa_fideo_espinaca,1
+Sopa de Colita de Res,sopa,res,sopa_colita_res,1
+Sopa de Mariscos,sopa,pescado,sopa_mariscos,1
+Sopa de Fideo con Guajillo,sopa,none,sopa_fideo_guajillo,1
+Sopa de Calabacitas con Poblano,sopa,none,sopa_calabacitas_poblano,1
+Sopa de Huitlacoche,sopa,none,sopa_huitlacoche,1
+Sopa Portuguesa,sopa,none,sopa_portuguesa,1
+Sopa de Papa con Chipotle,sopa,none,sopa_papa_chipotle,1
+Sopa de Fideo con Higaditos,sopa,pollo,sopa_fideo_higaditos,1
+Sopa de Flor de Calabaza con Nopales,sopa,none,sopa_flor_calabaza_nopales,1
+Sopa de Albondiguitas,sopa,res,sopa_albondiguitas,1
+Sopa Poblana,sopa,none,sopa_poblana,1
+Puchero de Res,sopa,res,puchero_res,1
+Sopa de Codito con Espinaca,sopa,none,sopa_codito_espinaca,1
+Fabada Asturiana,sopa,cerdo,fabada_asturiana,1
+Sopa de Garbanzo,sopa,none,sopa_garbanzo,1
+Arroz Aguado,sopa,none,arroz_aguado,1
+Sopa de Lentejas con Chorizo y Plátano,sopa,cerdo,sopa_lentejas_chorizo_platano,1
+Caldo de Res,sopa,res,caldo_res,1
+Chilpachole de Jaiba,sopa,pescado,chilpachole_jaiba,1
+Sopa de Fideo al Ajillo,sopa,none,sopa_fideo_ajillo,1
+Sopa de Chayote,sopa,none,sopa_chayote,1
+Sopa de Elote con Tuétano,sopa,res,sopa_elote_tuetano,1
+Sopa Negra,sopa,none,sopa_negra,1
+Sopa Oriental,sopa,none,sopa_oriental,1
+Sopa de Elote,sopa,none,sopa_elote,1
+Sopa de Tres Chiles con Nopales,sopa,none,sopa_tres_chiles_nopales,1
+Sopa Campestre,sopa,none,sopa_campestre,1
+Crema de Garbanzo con Jengibre,sopa,none,crema_garbanzo_jengibre,1
+Sopa de Calabacitas con Pollo,sopa,pollo,sopa_calabacitas_pollo,1
+Sopa Monterrey,sopa,none,sopa_monterrey,1
+Sopa de Elote y Calabacitas,sopa,none,sopa_elote_calabacitas,1
+Sopa de Pasta con Chilacayote y Zanahoria,sopa,none,sopa_pasta_chilacayote_zanahoria,1
+Sopa de Flor de Calabaza con Elote,sopa,none,sopa_flor_calabaza_elote,1
+Sopa de Pasta con Habas,sopa,none,sopa_pasta_habas,1
+Sopa de Pan y Ajo con Pollo,sopa,pollo,sopa_pan_ajo_pollo,1
+Sopa Cremosa de Jamón y Papas,sopa,cerdo,sopa_jamon_papas,1
+Crema Fría de Aguacate y Calabacín,sopa,none,crema_aguacate_calabacin,1
+Sopa de Jaiba,sopa,pescado,sopa_jaiba,1
+Sopa de Champiñones con Flor de Calabaza,sopa,none,sopa_champinon_flor_calabaza,1
+Crema de Coliflor con Toque de Miel,sopa,none,crema_coliflor_miel,1
+Pozole,sopa,cerdo,pozole,1
+Sopa de Acelga y Garbanzo,sopa,none,sopa_acelga_garbanzo,1
+Sopa de Milpa,sopa,none,sopa_milpa,1
+Sopa de Papa con Queso,sopa,none,sopa_papa_queso,1
+Sopa de Queso,sopa,none,sopa_queso,1
+Atlixquense,sopa,none,sopa_atlixquense,1
+
+Crema de Zanahoria,crema,none,crema_zanahoria,1
+Crema de Cilantro,crema,none,crema_cilantro,1
+Crema Conde,crema,none,crema_conde,1
+Crema de Elote,crema,none,crema_elote,1
+Crema de Pimiento,crema,none,crema_pimiento,1
+Crema de Brócoli,crema,none,crema_brocoli,1
+Crema de Almeja,crema,pescado,crema_almeja,1
+Crema de Queso,crema,none,crema_queso,1
+Crema Poblana,crema,none,crema_poblana,1
+Crema de Tomate,crema,none,crema_tomate,1
+Crema de Chayote,crema,none,crema_chayote,1
+Crema de Champiñones,crema,none,crema_champinon,1
+Crema de Espárragos,crema,none,crema_esparragos,1
+Crema de Ejote,crema,none,crema_ejote,1
+Crema de Chicharrón,crema,cerdo,crema_chicharron,1
+Crema de Calabaza,crema,none,crema_calabaza,1
+Crema de Frijol,crema,none,crema_frijol,1
+Crema de Berros,crema,none,crema_berros,1
+Crema de Calamar,crema,pescado,crema_calamar,1
+Crema de Verduras,crema,none,crema_verduras,1
+Crema Tarasca,crema,none,crema_tarasca,1
+Crema de Nuez,crema,none,crema_nuez,1
+Crema de Brócoli y Zanahoria,crema,none,crema_brocoli_zanahoria,1
+Crema de Chícharo,crema,none,crema_chicharo,1
+Crema de Haba con Nopal,crema,none,crema_haba_nopal,1
+Crema de Garbanzo con Chorizo,crema,cerdo,crema_garbanzo_chorizo,1
+Crema de Elote con Chayote,crema,none,crema_elote_chayote,1
+Crema de Chícharos con Zanahorias Asadas,crema,none,crema_chicharos_zanahoria_asada,1
+Crema de Lenteja con Chipotle,crema,none,crema_lenteja_chipotle,1
+Crema de Brócoli con Apio,crema,none,crema_brocoli_apio,1
+Crema de Setas con Epazote,crema,none,crema_setas_epazote,1
+Crema de Flor de Calabaza,crema,none,crema_flor_calabaza,1
+Crema de Pimiento con Queso,crema,none,crema_pimiento_queso,1
+Crema de Calabaza con Chile Ancho,crema,none,crema_calabaza_chile_ancho,1
+Crema de Lechuga y Espinaca,crema,none,crema_lechuga_espinaca,1
+Crema de Coliflor con Queso,crema,none,crema_coliflor_queso,1
+Crema de Pera,crema,none,crema_pera,1
+Crema de Chile Morita,crema,none,crema_chile_morita,1
+Crema de Huitlacoche,crema,none,crema_huitlacoche,1
+Crema de Frijol con Chipotle,crema,none,crema_frijol_chipotle,1
+Crema de Queso y Uvas,crema,none,crema_queso_uvas,1
+Crema de Coliflor con Queso y Toque de Miel,crema,none,crema_coliflor_queso_miel,1
+Crema de Jalapeño y Papa,crema,none,crema_jalapeno_papa,1
+Crema de Garbanzo con Jengibre,crema,none,crema_garbanzo_jengibre,1
+Crema de Esquites,crema,none,crema_esquites,1
+Crema de Zanahoria y Nuez,crema,none,crema_zanahoria_nuez,1
+Crema de Mariscos,crema,pescado,crema_mariscos,1
+Crema de Jitomate Rostizado con Queso de Cabra y Aceite de Oliva,crema,none,crema_jitomate_queso_cabra,1
+Crema de Espinaca con Nuez,crema,none,crema_espinaca_nuez,1
+Crema Vichyssoise (Poro y Papa),crema,none,crema_vichyssoise,1
+Crema de Papa con Pimiento,crema,none,crema_papa_pimiento,1
+
+Caldo Xóchitl,sopa,pollo,caldo_xochitl,1
+Caldo Tlalpeño,sopa,pollo,caldo_tlalpeno,1
+Caldo de Camarón,sopa,camaron,caldo_camaron,1
+Caldo Cantinero,sopa,none,caldo_cantinero,1
+Jugo de Carne,sopa,res,jugo_carne,1
+Caldo Loco,sopa,none,caldo_loco,1
+Caldo de Colita de Res,sopa,res,caldo_colita_res,1
+Consomé Ranchero,sopa,res,consome_ranchero,1
+Frijoles Charros,sopa,cerdo,frijoles_charros,1
+Caldo de Pescado,sopa,pescado,caldo_pescado,1
+Caldo Ranchero,sopa,res,caldo_ranchero,1
+Chilpáchole de Jaiba,sopa,pescado,chilpachole_jaiba,1
+Caldo de Menudencias,sopa,pollo,caldo_menudencias,1
+Sopa Cantinera,sopa,none,sopa_cantinera,1
+Caldo de Pollo con Chile de Árbol,sopa,pollo,caldo_pollo_chile_arbol,1
+Pancita,sopa,res,pancita,1
+Flor de Calabaza con Pollo,sopa,pollo,flor_calabaza_pollo,1
+Sopa de Calabacitas con Pollo,sopa,pollo,sopa_calabacitas_pollo,1
+Tallarines con Pollo,sopa,pollo,tallarines_pollo,1
+
+Fideo Seco,pasta,none,pasta_fideo_seco,1
+Fideo con Espinaca,pasta,none,pasta_fideo_espinaca,1
+Fideo Seco con Chipotle,pasta,none,pasta_fideo_seco_chipotle,1
+Fideo Seco con Guajillo,pasta,none,pasta_fideo_seco_guajillo,1
+Fideo Seco a los 4 Chiles,pasta,none,pasta_fideo_seco_4_chiles,1
+
+Codito Frío,pasta,cerdo,pasta_codito_frio,1
+Codito Hawaiano,pasta,cerdo,pasta_codito_hawaiano,1
+Codito con Espinaca,pasta,none,pasta_codito_espinaca,1
+Codito con Crema al Chipotle,pasta,none,pasta_crema_chipotle,1
+Pasta de Coditos con Verduras,pasta,none,pasta_coditos_verduras,1
+
+Fusilli Tricolor (Verduras y Vino Blanco),pasta,none,pasta_verduras_vino_blanco,1
+Fusilli con Atún,pasta,pescado,pasta_atun,1
+Fusilli al Chipotle,pasta,none,pasta_chipotle,1
+
+Fettuccini al Chipotle,pasta,none,pasta_chipotle,1
+Fettuccini de Espinaca,pasta,none,pasta_espinaca,1
+Fettuccini Pomodoro,pasta,none,pasta_pomodoro,1
+Fettuccini en Salsa Blanca con Camarones,pasta,camaron,pasta_salsa_blanca_camaron,1
+Fettuccini Cremoso con Tomate y Albahaca,pasta,none,pasta_tomate_albahaca,1
+Fettuccini al Ajo y Aceite de Oliva,pasta,none,pasta_ajo_aceite_oliva,1
+Fettuccini al Tomate Rostizado con Tocino,pasta,cerdo,pasta_tomate_rostizado_tocino,1
+
+Espagueti a la Boloñesa,pasta,res,pasta_bolonesa,1
+Espagueti Rojo,pasta,none,pasta_rojo,1
+Espagueti Verde,pasta,none,pasta_verde,1
+Espagueti Verde con Elote,pasta,none,pasta_verde_elote,1
+Espagueti con Elote,pasta,none,pasta_elote,1
+Espagueti Carbonara,pasta,cerdo,pasta_carbonara,1
+Espagueti al Mojo,pasta,none,pasta_mojo,1
+Espagueti a los 3 Quesos,pasta,none,pasta_3_quesos,1
+Espagueti al Ajo y 3 Quesos,pasta,none,pasta_ajo_3_quesos,1
+Espagueti al Pesto,pasta,none,pasta_pesto,1
+Pasta al Pesto de Pistache,pasta,none,pasta_pesto_pistache,1
+Espagueti a la Jardinera,pasta,none,pasta_jardinera,1
+Espagueti con Verduras,pasta,none,pasta_verduras,1
+Espagueti con Mejillones,pasta,pescado,pasta_mejillones,1
+Espagueti con Camarones al Vino Blanco,pasta,camaron,pasta_camaron_vino_blanco,1
+Pasta con Camarones y Vino Blanco,pasta,camaron,pasta_camaron_vino_blanco,1
+Espagueti con Piña,pasta,none,pasta_pina,1
+Espagueti al Limón,pasta,none,pasta_limon,1
+Espagueti en Salsa de Tomate y Espinaca,pasta,none,pasta_tomate_espinaca,1
+Espagueti en Salsa de Brócoli,pasta,none,pasta_brocoli,1
+Espagueti en Salsa Cremosa de Espinaca al Curry,pasta,none,pasta_espinaca_curry,1
+Espagueti con Atún,pasta,pescado,pasta_atun,1
+Espagueti con Pollo y Champiñones,pasta,pollo,pasta_pollo_champinon,1
+Espagueti a la Mantequilla,pasta,none,pasta_mantequilla,1
+Espagueti a la Mexicana,pasta,none,pasta_mexicana,1
+Espagueti Marinara,pasta,none,pasta_marinara,1
+Espagueti al Vino Blanco con Tocino y Champiñones,pasta,cerdo,pasta_vino_blanco_tocino_champinon,1
+
+Pasta Perejil,pasta,none,pasta_perejil,1
+Pasta Arrabbiata,pasta,none,pasta_arrabbiata,1
+Pasta Italiana,pasta,none,pasta_italiana,1
+Pasta con Atún,pasta,pescado,pasta_atun,1
+Ensalada Italiana de Pasta,pasta,cerdo,pasta_ensalada_italiana,1
+Pasta Fría con Jamón,pasta,cerdo,pasta_fria_jamon,1
+Pasta Fría con Jalapeño,pasta,none,pasta_fria_jalapeno,1
+Ensalada Rusa con Pasta,pasta,none,pasta_ensalada_rusa,1
+Pasta Fría con Lechuga y Aderezo César,pasta,none,pasta_cesar,1
+Pasta Pluma con Salchicha,pasta,cerdo,pasta_salchicha,1
+Pasta de Tres Quesos,pasta,none,pasta_3_quesos,1
+Pasta con Crema de Espinaca,pasta,none,pasta_crema_espinaca,1
+Pasta Cremosa con Atún,pasta,pescado,pasta_atun_cremosa,1
+Pasta al Horno con Guajillo y Queso,pasta,none,pasta_horno_guajillo_queso,1
+Pasta con Setas,pasta,none,pasta_setas,1
+Surimi con Pasta y Mandarina,pasta,pescado,pasta_surimi_mandarina,1
+Pasta con Salsa de Pimiento Morrón,pasta,none,pasta_pimiento_morron,1
+Pasta con Almejas,pasta,pescado,pasta_almejas,1
+Pomodoro,pasta,none,pasta_pomodoro,1
+Alfredo,pasta,none,pasta_alfredo,1
+Pasta Alfredo con Camarones,pasta,camaron,pasta_alfredo,1
+Alfredo con Albóndigas y Albahaca,pasta,res,pasta_alfredo,1
+Pasta con Champiñones y Cebolla Caramelizada,pasta,none,pasta_champinon_cebolla_caramelizada,1
+Pasta con Chorizo y Chipotle,pasta,cerdo,pasta_chorizo_chipotle,1
+Florentina,pasta,none,pasta_florentina,1
+Espagueti Chino,pasta,none,pasta_chino,1
+Macarrones con Espinaca Gratinados,pasta,none,pasta_gratinado_espinaca,1
+Tallarines con Verduras Salteadas,pasta,none,pasta_verduras_salteadas,1
+
+
+Filete de Pescado,fuerte,pescado,filete_pescado,1
+Filete Sol con Ensalada,fuerte,pescado,filete_sol_ensalada,1
+Filete Empapelado,fuerte,pescado,filete_empapelado,1
+Filete Empanizado,fuerte,pescado,filete_empanizado,1
+Filete Empanizado con Ajonjolí,fuerte,pescado,filete_empanizado_ajonjoli,1
+Filete a la Veracruzana,fuerte,pescado,filete_veracruzana,1
+Filete en Salsa de Cilantro,fuerte,pescado,filete_cilantro,1
+Filete de Pescado en Salsa de Cilantro,fuerte,pescado,filete_pescado_cilantro,1
+Filete al Mojo de Ajo,fuerte,pescado,filete_mojo_ajo,1
+Filete al Ajillo,fuerte,pescado,filete_ajillo,1
+Filete Relleno,fuerte,pescado,filete_relleno,1
+Filete Relleno de Mariscos,fuerte,pescado,filete_relleno_mariscos,1
+Filete de Pescado a la Diabla,fuerte,pescado,filete_diabla,1
+Filete de Pescado Cárdenas,fuerte,pescado,filete_cardenas,1
+Filete de Pescado Munière,fuerte,pescado,filete_muniere,1
+Filete a la Talla,fuerte,pescado,filete_a_la_talla,1
+Filete al Gusto,fuerte,pescado,filete_al_gusto,1
+Filete a la Plancha con Ensalada,fuerte,pescado,filete_plancha_ensalada,1
+Filete en Hoja de Plátano,fuerte,pescado,filete_hoja_platano,1
+Filete Rockefeller,fuerte,pescado,filete_rockefeller,1
+Filete Gratinado,fuerte,pescado,filete_gratinado,1
+Filete al Horno con Vegetales,fuerte,pescado,filete_horno_vegetales,1
+
+Tacos de Pescado,fuerte,pescado,tacos_pescado,1
+Taco de Pescado Tradicional,fuerte,pescado,taco_pescado_tradicional,1
+Tacos de Pescado a la Talla,fuerte,pescado,tacos_pescado_a_la_talla,1
+Tacos de Pescado al Mezquite,fuerte,pescado,tacos_pescado_mezquite,1
+Tacos de Pescado Estilo Ensenada (Capeado),fuerte,pescado,tacos_pescado_ensenada,1
+Carnitas de Pescado,fuerte,pescado,carnitas_pescado,1
+
+Mojarra Frita al Mojo,fuerte,pescado,mojarra_mojo,1
+Zarandeado con Pico de Gallo,fuerte,pescado,zarandeado_pico_gallo,1
+Filete de Pescado Zarandeado,fuerte,pescado,filete_zarandeado,1
+Pescado Costeño,fuerte,pescado,pescado_costeno,1
+Pescado Thai,fuerte,pescado,pescado_thai,1
+Pescado Enamorado,fuerte,pescado,pescado_enamorado,1
+Filete Caribeño,fuerte,pescado,filete_caribeno,1
+
+Filete de Pescado en Vino Blanco,fuerte,pescado,filete_vino_blanco,1
+Filete al Vino Blanco,fuerte,pescado,filete_al_vino_blanco,1
+Salmón a las Finas Hierbas con Verduras,fuerte,pescado,salmon_finas_hierbas,1
+
+Filete de Pescado al Limón,fuerte,pescado,filete_limon,1
+Filete de Pescado al Cilantro,fuerte,pescado,filete_al_cilantro,1
+Filete de Pescado al Cilantro y Limón,fuerte,pescado,filete_cilantro_limon,1
+Filete de Pescado al Chile Limón,fuerte,pescado,filete_chile_limon,1
+Filete de Pescado al Chiltepin,fuerte,pescado,filete_chiltepin,1
+Filete de Pescado al Chimichurri,fuerte,pescado,filete_chimichurri,1
+Filete al Romero,fuerte,pescado,filete_romero,1
+Filete de Pescado a la Mostaza,fuerte,pescado,filete_mostaza,1
+Filete de Pescado a la Mantequilla Negra,fuerte,pescado,filete_mantequilla_negra,1
+Filete de Pescado a la Mantequilla de Limón,fuerte,pescado,filete_mantequilla_limon,1
+
+Filete de Pescado al Epazote,fuerte,pescado,filete_epazote,1
+Filete de Pescado al Pipían,fuerte,pescado,filete_pipian,1
+Filete de Pescado en Salsa Holandesa,fuerte,pescado,filete_holandesa,1
+Filete de Pescado en Salsa Verde,fuerte,pescado,filete_salsa_verde,1
+Filete sobre Nopal en Salsa Verde,fuerte,pescado,filete_nopal_salsa_verde,1
+Filete de Pescado en Salsa de Alcaparras,fuerte,pescado,filete_alcaparras,1
+Filete de Pescado en Salsa de Jamaica,fuerte,pescado,filete_jamaica,1
+Filete de Pescado en Salsa de Chile Morita,fuerte,pescado,filete_chile_morita,1
+Filete de Pescado en Salsa de Maracuyá,fuerte,pescado,filete_maracuya,1
+Filete de Pescado en Salsa de Huitlacoche,fuerte,pescado,filete_huitlacoche,1
+Filete de Pescado con Flor de Calabaza,fuerte,pescado,filete_flor_calabaza,1
+Filete de Pescado con Huitlacoche,fuerte,pescado,filete_con_huitlacoche,1
+Filete de Pescado con Mango,fuerte,pescado,filete_mango,1
+Filete de Pescado con Vinagreta de Cilantro y Limón,fuerte,pescado,filete_vinagreta_cilantro_limon,1
+Filete de Pescado con Salsa Rosa,fuerte,pescado,filete_salsa_rosa,1
+Filete de Pescado en Salsa de Queso,fuerte,pescado,filete_salsa_queso,1
+Filete de Pescado en Salsa de Almejas,fuerte,pescado,filete_salsa_almejas,1
+Filete de Pescado en Salsa de Pimientos,fuerte,pescado,filete_salsa_pimientos,1
+Filete de Pescado a la Crema,fuerte,pescado,filete_a_la_crema,1
+Filete de Pescado a la Crema de Chile Poblano,fuerte,pescado,filete_crema_chile_poblano,1
+Filete de Pescado en Crema de Cilantro,fuerte,pescado,filete_crema_cilantro,1
+
+Filete de Pescado al Chipotle,fuerte,pescado,filete_chipotle,1
+Filete de Pescado al Mezcal,fuerte,pescado,filete_mezcal,1
+Filete al Coco,fuerte,pescado,filete_coco,1
+Filete con Costra de Frutos Secos,fuerte,pescado,filete_costra_frutos_secos,1
+Pescado en Costra de Cacahuate y Puré de Chícharo,fuerte,pescado,pescado_costra_cacahuate_pure_chicharo,1
+Pescado en Costra de Cacahuate,fuerte,pescado,pescado_costra_cacahuate,1
+Pescado en Costra de Pistache y Limón,fuerte,pescado,pescado_costra_pistache_limon,1
+Pescado en Costra de Frutos Secos,fuerte,pescado,pescado_costra_frutos_secos,1
+Filete de Pescado en Costra de Chiles Secos,fuerte,pescado,filete_costra_chiles_secos,1
+Filete de Pescado Empanizado con Coco,fuerte,pescado,filete_empanizado_coco,1
+Rollitos de Pescado Rellenos de Verduras,fuerte,pescado,rollitos_pescado_verduras,1
+
+Croquetas de Atún,fuerte,pescado,croquetas_atun,1
+Hamburguesa de Atún,fuerte,pescado,hamburguesa_atun,1
+Atún a la Vizcaína,fuerte,pescado,atun_vizcaina,1
+Aguacate Relleno de Atún,fuerte,pescado,aguacate_atun,1
+Chiles Rellenos de Atún,fuerte,pescado,chiles_rellenos_atun,1
+Chile Relleno de Atún con Queso en Salsa Chipotle,fuerte,pescado,chile_relleno_atun_chipotle,1
+Tostada de Atún al Chipotle,fuerte,pescado,tostada_atun_chipotle,1
+Tortitas de Atún en Espejo de Salsa Pasilla,fuerte,pescado,tortitas_atun_salsa_pasilla,1
+
+Aguachile Negro,fuerte,pescado,aguachile_negro,1
+Cóctel Campechano,fuerte,pescado,coctel_campechano,1
+Aguacate de Marisco,fuerte,pescado,aguacate_marisco,1
+Alambre de Mariscos,fuerte,pescado,alambre_mariscos,1
+Tostada Embarazada de Mariscos,fuerte,pescado,tostada_embarazada_mariscos,1
+Dúo de Tostadas (Aguachile Negro y Tostada de Marlín),fuerte,pescado,duo_tostadas_aguachile_negro_marlin,1
+Tostada de Atún al Chipotle,fuerte,pescado,tostada_atun_chipotle,1
+Tortitas de Atún Espejo en Salsa Pasilla,fuerte,pescado,tortitas_atun_salsa_pasilla,1
+Croquetas de Atún,fuerte,pescado,croquetas_atun,1
+Aguacate Relleno de Atún,fuerte,pescado,aguacate_relleno_atun,1
+Hamburguesa de Atún,fuerte,pescado,hamburguesa_atun,1
+Chiles Rellenos de Atún,fuerte,pescado,chiles_rellenos_atun,1
+Atún a la Vizcaína,fuerte,pescado,atun_vizcaina,1
+Chile Relleno de Atún con Queso en Salsa Chipotle,fuerte,pescado,chile_relleno_atun_chipotle,1
+Chile Relleno de Atún a la Vizcaína,fuerte,pescado,chile_relleno_atun_vizcaina,1
+Cucaracha,fuerte,pescado,cucaracha,1
+Pulpo Enamorado,fuerte,pescado,pulpo_enamorado,1
+
+
+Camarones a la Diabla,fuerte,camaron,camarones_diabla,1
+Camarones Empanizados,fuerte,camaron,camarones_empanizados,1
+Camarones Gabardina,fuerte,camaron,camarones_gabardina,1
+Camarones al Tequila,fuerte,camaron,camarones_tequila,1
+Camarones al Mojo de Ajo,fuerte,camaron,camarones_mojo_ajo,1
+Camarones al Limón,fuerte,camaron,camarones_limon,1
+Camarones al Chipotle,fuerte,camaron,camarones_chipotle,1
+Camarones al Pastor,fuerte,camaron,camarones_pastor,1
+Camarones a la Mexicana,fuerte,camaron,camarones_mexicana,1
+Camarones al Coco,fuerte,camaron,camarones_coco,1
+Camarones Empanizados con Coco,fuerte,camaron,camarones_empanizados_coco,1
+Camarones Roca,fuerte,camaron,camarones_roca,1
+Camarones Rockefeller,fuerte,camaron,camarones_rockefeller,1
+Camarones Hawaianos,fuerte,camaron,camarones_hawaianos,1
+Camarones Alegría,fuerte,camaron,camarones_alegria,1
+Camarones Cajún,fuerte,camaron,camarones_cajun,1
+Camarones Costa Brava,fuerte,camaron,camarones_costa_brava,1
+Camarones Estilo Oriental,fuerte,camaron,camarones_oriental,1
+Camarones al Ajo Mantequilla,fuerte,camaron,camarones_ajo_mantequilla,1
+Camarones al Vino Blanco,fuerte,camaron,camarones_vino_blanco,1
+Camarones con Jalapeño,fuerte,camaron,camarones_jalapeno,1
+Camarones al Cilantro con Chile Limón,fuerte,camaron,camarones_cilantro_chile_limon,1
+Camarones en Salsa de Tamarindo,fuerte,camaron,camarones_tamarindo,1
+Camarones en Salsa de Piña con Chipotle,fuerte,camaron,camarones_pina_chipotle,1
+Camarones al Sartén Enchilados con Queso,fuerte,camaron,camarones_enchilados_queso,1
+Camarones Ballena Rellenos de Queso,fuerte,camaron,camarones_ballena_queso,1
+Camarones Envuelto en Papa,fuerte,camaron,camarones_papa,1
+Camarones al Mojo,fuerte,camaron,camarones_mojo,1
+Camarones al Ajillo,fuerte,camaron,camarones_ajillo,1
+Camarones en Chipotle,fuerte,camaron,camarones_chipotle_cremoso,1
+Camarones al Cilantro,fuerte,camaron,camarones_cilantro,1
+Camarones al Tamarindo,fuerte,camaron,camarones_tamarindo_clasico,1
+Camarones Enchilpayados,fuerte,camaron,camarones_enchilpayados,1
+Camarones Cajún Picantes,fuerte,camaron,camarones_cajun_picantes,1
+Camarones a la Diabla Negra,fuerte,camaron,camarones_diabla_negra,1
+Brocheta de Camarón,fuerte,camaron,brocheta_camaron,1
+Tortitas de Camarón,fuerte,camaron,tortitas_camaron,1
+Tacos de Camarón,fuerte,camaron,tacos_camaron,1
+Tacos de Camarón al Chipotle,fuerte,camaron,tacos_camaron_chipotle,1
+Tacos de Camarón Tradicional,fuerte,camaron,tacos_camaron_tradicional,1
+Taco Gobernador,fuerte,camaron,taco_gobernador,1
+Aguachile de Camarón,fuerte,camaron,aguachile_camaron,1
+Aguachile Negro de Camarón,fuerte,camaron,aguachile_camaron_negro,1
+Aguachile de Camarón con Mango,fuerte,camaron,aguachile_camaron_mango,1
+Paella,fuerte,camaron,paella_fija,1
+
+
+Cerdo en Salsa Cascabel,fuerte,cerdo,cerdo_salsa_cascabel,1
+Cerdo con Verdolagas,fuerte,cerdo,cerdo_verdolagas,1
+Cerdo en Adobo,fuerte,cerdo,cerdo_adobo,1
+Cerdo en Mole Verde,fuerte,cerdo,cerdo_mole_verde,1
+Cerdo Entomatado,fuerte,cerdo,cerdo_entomatado,1
+Cerdo en Pipían,fuerte,cerdo,cerdo_pipian,1
+Cerdo en Salsa Morita,fuerte,cerdo,cerdo_morita,1
+Cerdo en Chile de Árbol,fuerte,cerdo,cerdo_chile_arbol,1
+Carne Enchilada,fuerte,cerdo,carne_enchilada,1
+Carne Enchilada con Frijoles,fuerte,cerdo,carne_enchilada_frijoles,1
+Carne Enchilada con Guacamole,fuerte,cerdo,carne_enchilada_guacamole,1
+
+Chuleta Fresca,fuerte,cerdo,chuleta_fresca,1
+Chuleta Ahumada,fuerte,cerdo,chuleta_ahumada,1
+Chuleta Ahumada con Puré,fuerte,cerdo,chuleta_ahumada_pure,1
+Chuleta Ahumada en Pasilla,fuerte,cerdo,chuleta_ahumada_pasilla,1
+Chuleta Ahumada a la Parrilla con Guacamole,fuerte,cerdo,chuleta_ahumada_parrilla_guacamole,1
+Chuleta Hawaiana,fuerte,cerdo,chuleta_hawaiana,1
+Chuleta en Salsa Guajillo,fuerte,cerdo,chuleta_guajillo,1
+Chuleta en Salsa Morita,fuerte,cerdo,chuleta_morita,1
+Chuleta en Pasilla,fuerte,cerdo,chuleta_pasilla,1
+Chuletas Entomatadas,fuerte,cerdo,chuletas_entomatadas,1
+Chuletas en Salsa Verde,fuerte,cerdo,chuletas_salsa_verde,1
+Chuleta en Salsa de Chiles Secos con Frijoles,fuerte,cerdo,chuleta_chiles_secos_frijoles,1
+Chuleta de Cerdo al Cilantro,fuerte,cerdo,chuleta_cilantro,1
+Chuletas de Cerdo al Ajillo,fuerte,cerdo,chuletas_ajillo,1
+Chuletas en Salsa de Piña,fuerte,cerdo,chuletas_pina,1
+Chuletas en Salsa de Miel Picosita,fuerte,cerdo,chuletas_miel_picosita,1
+Chuleta de Cerdo sobre Esquites,fuerte,cerdo,chuleta_esquites,1
+Chuleta de Cerdo en Salsa de Mostaza con Puré,fuerte,cerdo,chuleta_mostaza_pure,1
+Chuleta de Cerdo en Salsa Verde con Habas,fuerte,cerdo,chuleta_salsa_verde_habas,1
+Chuleta de Puerco sobre Esquites,fuerte,cerdo,chuleta_puerco_esquites,1
+Chuleta de Cerdo Empanizada Rellena de Jamón y Queso,fuerte,cerdo,chuleta_empanizada_jamon_queso,1
+
+Medallones de Cerdo en Salsa de Mostaza,fuerte,cerdo,medallones_mostaza,1
+Medallones de Cerdo en Salsa de Pimienta con Puré,fuerte,cerdo,medallones_pimienta_pure,1
+Medallones en Salsa 3 Chiles al Mezcal,fuerte,cerdo,medallones_3_chiles_mezcal,1
+Medallones de Cerdo en Salsa de Ciruela y Verduras a la Mantequilla,fuerte,cerdo,medallones_ciruela_verduras_mantequilla,1
+Filete Miñón de Cerdo,fuerte,cerdo,filete_minon_cerdo,1
+Fajitas de Cerdo en Adobo,fuerte,cerdo,fajitas_cerdo_adobo,1
+Bistec de Cerdo en Adobo con Guacamole,fuerte,cerdo,bistec_cerdo_adobo_guacamole,1
+
+Costilla de Cerdo en Salsa Molcajete,fuerte,cerdo,costilla_salsa_molcajete,1
+Costilla de Cerdo en Pasilla,fuerte,cerdo,costilla_pasilla,1
+Costilla de Cerdo a la Cerveza,fuerte,cerdo,costilla_cerveza,1
+Costilla de Cerdo al Chile Ajo,fuerte,cerdo,costilla_chile_ajo,1
+Costilla de Cerdo en Morita,fuerte,cerdo,costilla_morita,1
+Costilla de Cerdo en Salsa Tatemada,fuerte,cerdo,costilla_salsa_tatemada,1
+Costilla de Cerdo con Salsa de Tamarindo y Pico de Gallo,fuerte,cerdo,costilla_tamarindo_pico_gallo,1
+Costilla en Salsa de Tamarindo al Horno,fuerte,cerdo,costilla_tamarindo_horno,1
+Costilla de Cerdo en Crema de Chipotle,fuerte,cerdo,costilla_crema_chipotle,1
+Costillas en Salsa de Chipotle,fuerte,cerdo,costillas_chipotle,1
+Costillas en Salsa Búfalo,fuerte,cerdo,costillas_bufalo,1
+Costillas al Curry y Miel,fuerte,cerdo,costillas_curry_miel,1
+Costillas BBQ,fuerte,cerdo,costillas_bbq,1
+Costillas BBQ Habaneras,fuerte,cerdo,costillas_bbq_habanero,1
+Costillitas BBQ,fuerte,cerdo,costillitas_bbq,1
+Costillas al Josper,fuerte,cerdo,costillas_josper,1
+Costillas de Cerdo con Rajas,fuerte,cerdo,costillas_rajas,1
+Costilla de Cerdo con Rajas Poblanas,fuerte,cerdo,costilla_rajas_poblanas,1
+Costilla y Chicharrón en Salsa Verde con Verdolagas,fuerte,cerdo,costilla_chicharron_salsa_verde_verdolagas,1
+
+Chicharrón en Salsa Roja,fuerte,cerdo,chicharron_salsa_roja,1
+Chicharrón en Salsa Verde,fuerte,cerdo,chicharron_salsa_verde,1
+Chicharrón en Salsa Morita,fuerte,cerdo,chicharron_morita,1
+Chicharrón en Salsa de Mostaza,fuerte,cerdo,chicharron_mostaza,1
+Chicharrón con Costilla en Salsa Verde,fuerte,cerdo,chicharron_costilla_salsa_verde,1
+Chicharrón con Costilla en Chile Cascabel,fuerte,cerdo,chicharron_costilla_chile_cascabel,1
+Chicharrón en Salsa Guajillo con Nopales,fuerte,cerdo,chicharron_guajillo_nopales,1
+Chicharrón en Salsa Tatemada,fuerte,cerdo,chicharron_tatemada,1
+
+Espinazo en Adobo,fuerte,cerdo,espinazo_adobo,1
+Espinazo con Verdolagas,fuerte,cerdo,espinazo_verdolagas,1
+Espinazo en Salsa Morita,fuerte,cerdo,espinazo_morita,1
+Espinazo en Salsa de Árbol,fuerte,cerdo,espinazo_salsa_arbol,1
+Espinazo con Habas y Calabacitas,fuerte,cerdo,espinazo_habas_calabacitas,1
+Espinazo en Salsa Martajada,fuerte,cerdo,espinazo_salsa_martajada,1
+
+Manitas en Salsa Verde,fuerte,cerdo,manitas_salsa_verde,1
+Manitas Capeadas,fuerte,cerdo,manitas_capeadas,1
+Manitas a la Vinagreta,fuerte,cerdo,manitas_vinagreta,1
+Pata en Salsa Verde,fuerte,cerdo,pata_salsa_verde,1
+Patitas en Escabeche,fuerte,cerdo,patitas_escabeche,1
+
+Longaniza en Salsa Verde con Nopales,fuerte,cerdo,longaniza_salsa_verde_nopales,1
+Longaniza en Salsa Verde,fuerte,cerdo,longaniza_salsa_verde,1
+Tortitas de Longaniza en Salsa de Morita,fuerte,cerdo,tortitas_longaniza_morita,1
+Chorizo Argentino con Papas Fritas y Chiles Toreados,fuerte,cerdo,chorizo_argentino,1
+Choripán,fuerte,cerdo,choripan,1
+Chorizo con Papas en Salsa de Árbol,fuerte,cerdo,chorizo_papas_salsa_arbol,1
+Frijoles Puercos,fuerte,cerdo,frijoles_puercos,1
+
+Pierna Adobada,fuerte,cerdo,pierna_adobada,1
+Pierna al Horno con Papas,fuerte,cerdo,pierna_horno_papas,1
+Pierna Enchilada a la Naranja,fuerte,cerdo,pierna_enchilada_naranja,1
+Lomo a la Ciruela,fuerte,cerdo,lomo_ciruela,1
+Lomo Mechado,fuerte,cerdo,lomo_mechado,1
+Lomo Mechado a los 3 Chiles,fuerte,cerdo,lomo_mechado_3_chiles,1
+Lomo Mechado en Salsa de Ciruela,fuerte,cerdo,lomo_mechado_ciruela,1
+Lomo al Tamarindo,fuerte,cerdo,lomo_tamarindo,1
+Lomo en Salsa de Champiñón,fuerte,cerdo,lomo_champinon,1
+Lomo en Salsa de Champiñones,fuerte,cerdo,lomo_salsa_champinones,1
+Lomo en Salsa de Alcaparras,fuerte,cerdo,lomo_alcaparras,1
+Lomo al Vino Tinto,fuerte,cerdo,lomo_vino_tinto,1
+Lomo Glaseado con Piña,fuerte,cerdo,lomo_glaseado_pina,1
+Lomo Nogado,fuerte,cerdo,lomo_nogado,1
+Lomo a la Naranja,fuerte,cerdo,lomo_naranja,1
+Cerdo a la Naranja,fuerte,cerdo,cerdo_naranja,1
+Lomo a las Finas Hierbas,fuerte,cerdo,lomo_finas_hierbas,1
+Lomo con Tocino y Hierbas,fuerte,cerdo,lomo_tocino_hierbas,1
+Lomo en Salsa de Mandarina,fuerte,cerdo,lomo_mandarina,1
+Lomo con Mostaza y Miel,fuerte,cerdo,lomo_mostaza_miel,1
+Lomo en Salsa de Pimiento,fuerte,cerdo,lomo_pimiento,1
+Lomo al Romero y Ajo,fuerte,cerdo,lomo_romero_ajo,1
+Lomo de Cerdo al Horno Adobado,fuerte,cerdo,lomo_horno_adobado,1
+Lomo en Pasilla con Tamarindo,fuerte,cerdo,lomo_pasilla_tamarindo,1
+
+Poc Chuc,fuerte,cerdo,poc_chuc,1
+Mixiote de Cerdo con Nopales,fuerte,cerdo,mixiote_cerdo_nopales,1
+Carnitas en Salsa Molcajete,fuerte,cerdo,carnitas_salsa_molcajete,1
+Carnitas en Salsa Ranchera,fuerte,cerdo,carnitas_salsa_ranchera,1
+Tacos de Pastor,fuerte,cerdo,tacos_pastor,1
+Tacos de Carnitas,fuerte,cerdo,tacos_carnitas,1
+Alambre de Pastor,fuerte,cerdo,alambre_pastor,1
+Gringa de Pastor,fuerte,cerdo,gringa_pastor,1
+Huarrache al Pastor,fuerte,cerdo,huarache_pastor,1
+
+Torta de Pierna,fuerte,cerdo,torta_pierna,1
+Torta de Cochinita,fuerte,cerdo,torta_cochinita,1
+Tacos de Cochinita,fuerte,cerdo,tacos_cochinita,1
+Enchiladas de Cochinita,fuerte,cerdo,enchiladas_cochinita,1
+Molcajete de Cochinita,fuerte,cerdo,molcajete_cochinita,1
+Huarache de Cochinita,fuerte,cerdo,huarache_cochinita,1
+Manchamanteles,fuerte,cerdo,manchamanteles,1
+Oreja de Elefante con Papa,fuerte,cerdo,oreja_elefante_papa,1
+
+Entomatado de Res,fuerte,res,entomatado_res,1
+Flautas de Res,fuerte,res,flautas_res,1
+Flautas de Res en Salsa Verde,fuerte,res,flautas_res_salsa_verde,1
+Flautas Tricolor,fuerte,res,flautas_tricolor,1
+
+New York con Chiles,fuerte,res,new_york_chiles,1
+New York con Papas,fuerte,res,new_york_papas,1
+Rib Eye con Chiles,fuerte,res,rib_eye_chiles,1
+Rib Eye con Papa al Horno,fuerte,res,rib_eye_papa_horno,1
+Rib Eye a la Parrilla con Chiles Toreados,fuerte,res,rib_eye_parrilla_chiles,1
+T-Bone con Ensalada,fuerte,res,t_bone_ensalada,1
+T-Bone a la Parrilla con Chiles Toreados,fuerte,res,t_bone_parrilla_chiles,1
+Top Sirloin con Chiles Toreados,fuerte,res,top_sirloin_chiles,1
+
+Arrachera Tradicional,fuerte,res,arrachera_tradicional,1
+Arrachera al Chimichurri,fuerte,res,arrachera_chimichurri,1
+Arrachera con Enchiladas,fuerte,res,arrachera_enchiladas,1
+Arrachera con Papa al Horno,fuerte,res,arrachera_papa_horno,1
+Arrachera con Papas y Chile,fuerte,res,arrachera_papas_chile,1
+Arrachera Tampiqueña,fuerte,res,arrachera_tampiquena,1
+Tampiqueña de Arrachera,fuerte,res,tampiquena_arrachera,1
+Arrachera con Chiles Toreados,fuerte,res,arrachera_chiles_toreados,1
+Arrachera con Nopales y Frijoles,fuerte,res,arrachera_nopales_frijoles,1
+Arrachera con Espinaca a la Crema,fuerte,res,arrachera_espinaca_crema,1
+Arrachera Tex-Mex,fuerte,res,arrachera_tex_mex,1
+Arrachera al Albañil,fuerte,res,arrachera_albanil,1
+Arrachera en Salsa Borracha,fuerte,res,arrachera_salsa_borracha,1
+Arrachera con Papas y Guacamole,fuerte,res,arrachera_papas_guacamole,1
+Parrillada de Arrachera,fuerte,res,parrillada_arrachera,1
+Arrachera Marinada en Limón y Achiote,fuerte,res,arrachera_limon_achiote,1
+
+Milanesa de Res con Papas,fuerte,res,milanesa_res_papas,1
+Milanesa Napolitana,fuerte,res,milanesa_napolitana,1
+Torta de Milanesa,fuerte,res,torta_milanesa,1
+Tacos de Milanesa de Res,fuerte,res,tacos_milanesa_res,1
+Sabanita de Res Gratinada,fuerte,res,sabanita_res_gratinada,1
+Sabanita de Res Poblana,fuerte,res,sabanita_res_poblana,1
+Sábana Invierno,fuerte,res,sabana_invierno,1
+
+Bistec a la Mexicana,fuerte,res,bistec_mexicana,1
+Bistec en Salsa Verde,fuerte,res,bistec_salsa_verde,1
+Bistec en Salsa Pasilla,fuerte,res,bistec_pasilla,1
+Bistec en Salsa Borracha,fuerte,res,bistec_borracha,1
+Bistec en Salsa Arriera,fuerte,res,bistec_arriera,1
+Bistec en Salsa Martajada,fuerte,res,bistec_martajada,1
+Bistec en Salsa Martajada con Frijoles de la Olla,fuerte,res,bistec_martajada_frijoles,1
+Bistec en Salsa Martajada con Tuétanos y Cerveza,fuerte,res,bistec_martajada_tuetanos,1
+
+Albondigas,fuerte,res,albondigas_res,1
+Albóndigas al Chipotle,fuerte,res,albondigas_chipotle,1
+Albóndigas en Salsa de Guajillo,fuerte,res,albondigas_guajillo,1
+Albóndiga de Espinaca con Queso,fuerte,res,albondiga_espinaca_queso,1
+
+Puntas de Res a la Mexicana,fuerte,res,puntas_res_mexicana,1
+Puntas al Chipotle,fuerte,res,puntas_chipotle,1
+Puntas al Albañil,fuerte,res,puntas_albanil,1
+
+Caldo de Res,fuerte,res,caldo_res,1
+Mole de Olla,fuerte,res,mole_olla,1
+Puchero de Res,fuerte,res,puchero_res,1
+Cola de Res en Adobo,fuerte,res,cola_res_adobo,1
+Cola de Res al Guajillo,fuerte,res,cola_res_guajillo,1
+Chambarete Entomatado,fuerte,res,chambarete_entomatado,1
+Chambarete a la Cerveza,fuerte,res,chambarete_cerveza,1
+Chambarete en Salsa de Pimienta a la Mantequilla,fuerte,res,chambarete_pimienta_mantequilla,1
+Chambarete en Salsa de Pimienta con Papas,fuerte,res,chambarete_pimienta_papas,1
+
+Suadero en Salsa Verde,fuerte,res,suadero_salsa_verde,1
+Suadero en Salsa Morita,fuerte,res,suadero_morita,1
+Suadero en Salsa de 3 Chiles,fuerte,res,suadero_3_chiles,1
+
+Barbacoa de Res,fuerte,res,barbacoa_res,1
+Birria de Res,fuerte,res,birria_res,1
+Tacos de Birria de Res,fuerte,res,tacos_birria_res,1
+Tacos de Barbacoa de Res,fuerte,res,tacos_barbacoa_res,1
+Tacos de Barbacoa de Picaña,fuerte,res,tacos_barbacoa_picana,1
+
+Cecina de Yecapixtla,fuerte,res,cecina_yecapixtla,1
+Cecina con Frijoles y Pico de Gallo,fuerte,res,cecina_frijoles_pico,1
+
+Picadillo,fuerte,res,picadillo_res,1
+Tostadas de Picadillo,fuerte,res,tostadas_picadillo,1
+Burritos de Picadillo Ahogados en Salsa Guajillo,fuerte,res,burritos_picadillo_guajillo,1
+
+Filete de Res sobre Nopal,fuerte,res,filete_res_nopal,1
+Filete Miñón en Salsa con Puré de Papa,fuerte,res,filete_minon_pure,1
+Filete de Lomo de Res con Salsa de Ajo,fuerte,res,filete_lomo_ajo,1
+Medallones de Res en Salsa de Queso Gorgonzola,fuerte,res,medallones_gorgonzola,1
+Medallones de Res al Oporto con Puré de Papa,fuerte,res,medallones_oporto_pure,1
+
+Molcajete Mixto,fuerte,res,molcajete_mixto,1
+Molcajete de Res,fuerte,res,molcajete_res,1
+Molcajete de Milanesa,fuerte,res,molcajete_milanesa,1
+Brocheta Mar y Tierra,fuerte,res,brocheta_mar_tierra,1
+Burrito Mar y Tierra,fuerte,res,burrito_mar_tierra,1
+Alambre Mar y Tierra,fuerte,res,alambre_mar_tierra,1
+
+Pollo en Salsa de Queso,fuerte,pollo,pollo_salsa_queso,1
+Pechuga Cordon Bleu,fuerte,pollo,pechuga_cordon_bleu,1
+Pollo Encacahuatado,fuerte,pollo,pollo_encacahuatado,1
+Pollo con Mole Verde,fuerte,pollo,pollo_mole_verde,1
+Pollo Asado Enchilado,fuerte,pollo,pollo_asado_enchilado,1
+Pechuga a la Plancha con Ensalada,fuerte,pollo,pechuga_plancha_ensalada,1
+Alambre de Pollo,fuerte,pollo,alambre_pollo,1
+Pollo Relleno en Salsa Verde,fuerte,pollo,pollo_relleno_salsa_verde,1
+Pollo en Salsa Pibil,fuerte,pollo,pollo_salsa_pibil,1
+Pechuga Napolitana,fuerte,pollo,pechuga_napolitana,1
+Pollo en Salsa Borracha,fuerte,pollo,pollo_salsa_borracha,1
+Pechuga Rellena de Espinaca,fuerte,pollo,pechuga_rellena_espinaca,1
+Enchiladas de Mole con Pollo,fuerte,pollo,enchiladas_mole_pollo,1
+Enchiladas Suizas,fuerte,pollo,enchiladas_suizas,1
+Enchiladas Rojas con Pollo,fuerte,pollo,enchiladas_rojas_pollo,1
+Enchiladas Verdes con Pollo,fuerte,pollo,enchiladas_verdes_pollo,1
+Fajitas de Pollo en Salsa Arriera,fuerte,pollo,fajitas_pollo_arriera,1
+Pechuga en Escabeche,fuerte,pollo,pechuga_escabeche,1
+Pollo en Salsa Cremosa,fuerte,pollo,pollo_salsa_cremosa,1
+Pechuga Rellena de Flor de Calabaza,fuerte,pollo,pechuga_rellena_flor,1
+Pechuga Encebollada en Salsa Verde,fuerte,pollo,pechuga_encebollada_verde,1
+Brocheta de Pollo,fuerte,pollo,brocheta_pollo,1
+Tortitas de Pollo,fuerte,pollo,tortitas_pollo,1
+Mixiote de Pollo,fuerte,pollo,mixiote_pollo,1
+Huarache de Pollo,fuerte,pollo,huarache_pollo,1
+Pechuga Rellena de Huitlacoche,fuerte,pollo,pechuga_rellena_huitlacoche,1
+Pechuga en Salsa de Tamarindo,fuerte,pollo,pechuga_tamarindo,1
+Pechuga Empanizada,fuerte,pollo,pechuga_empanizada,1
+Pechuga Chimichurri,fuerte,pollo,pechuga_chimichurri,1
+Milanesa de Pollo,fuerte,pollo,milanesa_pollo,1
+Pollo en Pipian,fuerte,pollo,pollo_pipian,1
+Pechuga Encebollada con Chiles Tostados,fuerte,pollo,pechuga_encebollada_chiles,1
+Pechuga Parmesana,fuerte,pollo,pechuga_parmesana,1
+Pollo en Salsa Verde,fuerte,pollo,pollo_salsa_verde,1
+Pollo en Adobo,fuerte,pollo,pollo_adobo,1
+Pechuga Tampiqueña,fuerte,pollo,pechuga_tampiquena,1
+Pollo en Salsa Pasilla,fuerte,pollo,pollo_salsa_pasilla,1
+Taco de Pollo con Mole,fuerte,pollo,taco_pollo_mole,1
+Milanesa de Pollo con Papas,fuerte,pollo,milanesa_pollo_papas,1
+Pollo en Salsa Molcajete,fuerte,pollo,pollo_salsa_molcajete,1
+Pechuga Azteca,fuerte,pollo,pechuga_azteca,1
+Rollo de Pechuga con Verduras,fuerte,pollo,rollo_pechuga_verduras,1
+Enfrijoladas de Pollo,fuerte,pollo,enfrijoladas_pollo,1
+Pollo en Salsa Chipotle,fuerte,pollo,pollo_chipotle,1
+Pollo en Mole Poblano,fuerte,pollo,pollo_mole_poblano,1
+Fajitas de Pollo,fuerte,pollo,fajitas_pollo,1
+Pechuga Rellena de Queso,fuerte,pollo,pechuga_rellena_queso,1
+Rollo de Pechuga con Tocino,fuerte,pollo,rollo_pechuga_tocino,1
+Sábana de Pollo Azteca,fuerte,pollo,sabana_pollo_azteca,1
+Pollo al Ajillo,fuerte,pollo,pollo_ajillo,1
+Pechuga al Albañil,fuerte,pollo,pechuga_albanil,1
+Pollo con Salsa de Tres Chiles,fuerte,pollo,pollo_tres_chiles,1
+Pollo en Salsa de Champiñones,fuerte,pollo,pollo_champinones,1
+Pollo al Chipotle,fuerte,pollo,pollo_chipotle_clasico,1
+Pechuga al Limón y Finas Hierbas,fuerte,pollo,pechuga_limon_hierbas,1
+Pollo a la Barbacoa,fuerte,pollo,pollo_barbacoa,1
+Pollo Jalapeño,fuerte,pollo,pollo_jalapeno,1
+Enmoladas de Pollo,fuerte,pollo,enmoladas_pollo,1
+Pollo al Pibil,fuerte,pollo,pollo_pibil,1
+Pollo Hawaiano,fuerte,pollo,pollo_hawaiano,1
+Nuggets de Pollo,fuerte,pollo,nuggets_pollo,1
+Pollo a la Cerveza con Papas,fuerte,pollo,pollo_cerveza_papas,1
+Pollo a la Mexicana,fuerte,pollo,pollo_mexicana,1
+Pollo en Salsa de Piña y Chipotle,fuerte,pollo,pollo_pina_chipotle,1
+Pechuga en Salsa de Maracuyá,fuerte,pollo,pechuga_maracuya,1
+Huarache de Tinga de Pollo,fuerte,pollo,huarache_tinga_pollo,1
+Pollo al Pastor,fuerte,pollo,pollo_pastor,1
+Pollo en Salsa Guajillo,fuerte,pollo,pollo_guajillo,1
+Pechuga al Chipotle,fuerte,pollo,pechuga_chipotle,1
+Pechuga Florentina,fuerte,pollo,pechuga_florentina,1
+Muslos al Ajillo,fuerte,pollo,muslos_ajillo,1
+Estofado de Pollo con Pimientos,fuerte,pollo,estofado_pollo_pimientos,1
+Pollo a la Mostaza,fuerte,pollo,pollo_mostaza,1
+Pollo a la Naranja con Finas Hierbas,fuerte,pollo,pollo_naranja_hierbas,1
+Pollo a Limón y Romero,fuerte,pollo,pollo_limon_romero,1
+Pollo Almendrado,fuerte,pollo,pollo_almendrado,1
+Pollo Agridulce,fuerte,pollo,pollo_agridulce,1
+Pollo Oriental,fuerte,pollo,pollo_oriental,1
+
+Agujas Norteñas,fuerte,res,agujas_nortenas,1
+Chicharrón Norteño,fuerte,cerdo,chicharron_norteno,1
+Arrachera con Chorizo,fuerte,res,arrachera_chorizo,1
+Oreja de Elefante de Pollo,fuerte,pollo,oreja_elefante_pollo,1
+Milanesa,fuerte,res,milanesa_res,1
+Sirloin,fuerte,res,sirloin,1
+Rib Eye,fuerte,res,rib_eye,1
+Costilla de Res,fuerte,res,costilla_res,1
+Picaña,fuerte,res,picana,1
+Chamorro,fuerte,cerdo,chamorro,1
+Mar y Tierra,fuerte,res,mar_y_tierra,1
+Cecina,fuerte,res,cecina,1
+Cochinita,fuerte,cerdo,cochinita,1
+Chamorro al Pibil,fuerte,cerdo,chamorro_pibil,1
+Carne Enchilada,fuerte,res,carne_enchilada,1
+
+Tortitas de Papa,complemento,none,tortitas_papa,1
+Huazontles en Pasilla,complemento,none,huazontles_pasilla,1
+Chayotes Rellenos de Jamón con Crema,complemento,none,chayotes_jamon_crema,1
+Tortitas de Espinaca,complemento,none,tortitas_espinaca,1
+Croquetas de Queso,complemento,none,croquetas_queso,1
+Nopales Rellenos,complemento,none,nopales_rellenos,1
+Torta de Papa,complemento,none,torta_papa,1
+Tacos Dorados de Papa,complemento,none,tacos_dorados_papa,1
+Tortitas de Ejote,complemento,none,tortitas_ejote,1
+Ensalada del Chef,complemento,none,ensalada_chef,1
+Huazontles,complemento,none,huazontles,1
+Papadzules,complemento,none,papadzules,1
+Calabacitas Rellenas de Queso,complemento,none,calabacitas_queso,1
+Chiles Rellenos de Queso,complemento,none,chile_relleno_queso,1
+Huazontles en Jitomate,complemento,none,huazontles_jitomate,1
+Tacos Dorados de Papa con Chorizo,complemento,none,tacos_papa_chorizo,1
+Enfrijoladas de Queso,complemento,none,enfrijoladas_queso,1
+Enchiladas Mineras,complemento,none,enchiladas_mineras,1
+Lasaña de Espinaca,complemento,none,lasana_espinaca,1
+Pambazo,complemento,none,pambazo,1
+Enchiladas Saludables,complemento,none,enchiladas_saludables,1
+Lasaña Boloñesa,complemento,none,lasana_bolonesa,1
+Romeritos,complemento,none,romeritos,1
+Chiles Güeros Rellenos,complemento,none,chiles_gueros_rellenos,1
+Tacos Dorados de Papa Ahogados,complemento,none,tacos_papa_ahogados,1
+Chayotes Rellenos de Jamón y Queso,complemento,none,chayotes_jamon_queso,1
+Tacos de Lechuga,complemento,none,tacos_lechuga,1
+Brócoli con Jamón,complemento,none,brocoli_jamon,1
+Chayotes con Crema,complemento,none,chayotes_crema,1
+Enchiladas Potosinas,complemento,none,enchiladas_potosinas,1
+Tacos de Zanahoria,complemento,none,tacos_zanahoria,1
+Queso Asado,complemento,none,queso_asado,1
+Calabaza Rellena de Queso Panela,complemento,none,calabaza_panela,1
+Huarache con Huevo,complemento,none,huarache_huevo,1
+Chile Relleno de Queso y Chorizo con Crema de Frijol,complemento,none,chile_queso_chorizo_frijol,1
+Chile Relleno de Atún con Crema de Chipotle,complemento,none,chile_atun_chipotle,1
+Tortitas de Atún en Salsa Pasilla,complemento,none,tortitas_atun_pasilla,1
+Nopal Relleno de Queso en Salsa Pasilla,complemento,none,nopal_queso_pasilla,1
+Huarache de Longaniza,complemento,none,huarache_longaniza,1
+Chile Relleno de Choriqueso,complemento,none,chile_choriqueso,1
+Chile Relleno de Plátano Macho Elote y Queso,complemento,none,chile_platano_elote_queso,1
+Chile Relleno de Queso y Elote en Crema Poblana,complemento,none,chile_queso_elote_poblana,1
+Enchiladas de Pollo en Chile Cascabel Gratinadas,complemento,none,enchiladas_pollo_cascabel,1
+Tortitas de Atún en Morita,complemento,none,tortitas_atun_morita,1
+Tortitas de Espinaca Atún y Papa,complemento,none,tortitas_espinaca_atun_papa,1
+Tortitas de Huazontles en Pasilla,complemento,none,tortitas_huazontles_pasilla,1
+Tortitas de Papa con Nopales en Chile Rojo,complemento,none,tortitas_papa_nopal_rojo,1
+Chile Relleno de Longaniza y Crema de Frijol,complemento,none,chile_longaniza_frijol,1
+Chilaquiles Leñador,complemento,none,chilaquiles_lenador,1
+Enchiladas Zacatecanas,complemento,none,enchiladas_zacatecanas,1
+Chilaquiles de Frijoles con Huevo en Salsa de Chorizo,complemento,none,chilaquiles_frijol_huevo_chorizo,1
+Enchiladas Jitomatadas,complemento,none,enchiladas_jitomatadas,1
+Enchiladas Colimenses,complemento,none,enchiladas_colimenses,1
+Enchiladas Queretanas,complemento,none,enchiladas_queretanas,1
+Chile Relleno de Fideo Seco a los Tres Chiles en Salsa de Frijol,complemento,none,chile_fideo_tres_chiles_frijol,1
+Tortitas de Coliflor Rellenas de Queso en Salsa Roja,complemento,none,tortitas_coliflor_queso_roja,1
+Tortitas de Brócoli Rellenas de Queso,complemento,none,tortitas_brocoli_queso,1
+Calabacitas Suizas Rellenas de Queso en Salsa Verde,complemento,none,calabacitas_suizas_verde,1
+Queso Asado en Salsa Tatemada,complemento,none,queso_tatemada,1
+Chile Ancho Relleno de Pollo y Queso con Verduras en Salsa Roja,complemento,none,chile_ancho_pollo_queso_roja,1
+Enchiladas Michoacanas,complemento,none,enchiladas_michoacanas,1
+Enchiladas de Papa en Salsa Leñador,complemento,none,enchiladas_papa_lenador,1
+Enchorizadas,complemento,none,enchorizadas,1
+Tortitas de Camarón con Nopales en Chile Guajillo,complemento,none,tortitas_camaron_nopal_guajillo,1
+Tortitas de Papa con Queso,complemento,none,tortitas_papa_queso,1
+
+Ensalada de Naranja Espinaca y Mandarina,ensalada,none,ensalada_naranja_espinaca_mandarina,1
+Brocheta de Ensalada,ensalada,none,brocheta_ensalada,1
+Ensalada César,ensalada,none,ensalada_cesar,1
+Ensalada Mixta,ensalada,none,ensalada_mixta,1
+Ensalada de Jitomate y Queso,ensalada,none,ensalada_jitomate_queso,1
+Ensalada Caprese,ensalada,none,ensalada_caprese,1
+Ensalada de Berros,ensalada,none,ensalada_berros,1
+Ensalada de Espinacas con Frutos Rojos,ensalada,none,ensalada_espinacas_frutos_rojos,1
+Ensalada Roja,ensalada,none,ensalada_roja,1
+Ensalada Rusa,ensalada,none,ensalada_rusa,1
+Ensalada Tricolor,ensalada,none,ensalada_tricolor,1
+Ensalada de Mango con Jícama,ensalada,none,ensalada_mango_jicama,1
+Ensalada de Surimi,ensalada,none,ensalada_surimi,1
+Ensalada de Jícama,ensalada,none,ensalada_jicama,1
+Ensalada Griega,ensalada,none,ensalada_griega,1
+Ensalada de Pepino,ensalada,none,ensalada_pepino,1
+Ensalada de Pepino Mixta,ensalada,none,ensalada_pepino_mixta,1
+Ensalada de Sandía con Naranja,ensalada,none,ensalada_sandia_naranja,1
+Ensalada de Nopal,ensalada,none,ensalada_nopal,1
+Ensalada de Frutos Rojos,ensalada,none,ensalada_frutos_rojos,1
+Ensalada de Espinaca con Manzana,ensalada,none,ensalada_espinaca_manzana,1
+Ensalada de Navidad,ensalada,none,ensalada_navidad,1
+Ensalada de Jitomate con Cebolla,ensalada,none,ensalada_jitomate_cebolla,1
+Espinaca con Naranja,ensalada,none,ensalada_espinaca_naranja,1
+Ensalada de Melón,ensalada,none,ensalada_melon,1
+Ensalada con Setas,ensalada,none,ensalada_setas,1
+Ensalada de Frutas,ensalada,none,ensalada_frutas,1
+Ensalada del Chef,ensalada,none,ensalada_chef,1
+Ensalada de Mango,ensalada,none,ensalada_mango,1
+Ensalada Cítrica,ensalada,none,ensalada_citrica,1
+Ensalada de Pepino a la Vinagreta,ensalada,none,ensalada_pepino_vinagreta,1
+Ensalada de Nopal con Apio,ensalada,none,ensalada_nopal_apio,1
+Ensalada de Nopal Tradicional,ensalada,none,ensalada_nopal_tradicional,1
+Ensalada de Atún con Aguacate,ensalada,none,ensalada_atun_aguacate,1
+Ensalada Rusa de Pollo,ensalada,none,ensalada_rusa_pollo,1
+
+Taco Placero,entrada_comal,none,taco_placero,1
+Tacos de Canasta,entrada_comal,none,tacos_canasta,1
+Panucho de Cochinita,entrada_comal,cerdo,panucho_cochinita,1
+Panuchos de Cochinita,entrada_comal,cerdo,panuchos_cochinita,1
+Gordita de Chicharrón,entrada_comal,cerdo,gordita_chicharron,1
+Gordita de Suadero,entrada_comal,res,gordita_suadero,1
+Gordita al Pastor,entrada_comal,cerdo,gordita_pastor,1
+Gorditas de Longaniza,entrada_comal,cerdo,gorditas_longaniza,1
+Tlacoyo de Frijol,entrada_comal,none,tlacoyo_frijol,1
+Tlacoyo de Nopal,entrada_comal,none,tlacoyo_nopal,1
+Tlacoyo de Chicharrón,entrada_comal,cerdo,tlacoyo_chicharron,1
+Tlacoyo de Habas,entrada_comal,none,tlacoyo_habas,1
+Sope de Pollo,entrada_comal,pollo,sope_pollo,1
+Sope de Chorizo,entrada_comal,cerdo,sope_chorizo,1
+Sope de Suadero,entrada_comal,res,sope_suadero,1
+Sopes de Longaniza,entrada_comal,cerdo,sopes_longaniza,1
+Sopes de Chicharrón,entrada_comal,cerdo,sopes_chicharron,1
+Chalupa Poblana,entrada_comal,none,chalupa_poblana,1
+Chalupa de Chorizo,entrada_comal,cerdo,chalupa_chorizo,1
+Chalupa de Cochinita,entrada_comal,cerdo,chalupa_cochinita,1
+Chalupas de Cochinita,entrada_comal,cerdo,chalupas_cochinita,1
+Quesadilla de Queso,entrada_comal,none,quesadilla_queso,1
+Quesadilla de Frijol,entrada_comal,none,quesadilla_frijol,1
+Quesadilla de Papa,entrada_comal,none,quesadilla_papa,1
+Quesadilla de Tinga,entrada_comal,pollo,quesadilla_tinga,1
+Quesadilla de Pollo,entrada_comal,pollo,quesadilla_pollo,1
+Quesadilla de Chicharrón en Salsa Verde,entrada_comal,cerdo,quesadilla_chicharron_salsa_verde,1
+Quesadilla de Picadillo,entrada_comal,res,quesadilla_picadillo,1
+Quesadilla de Tinga de Res,entrada_comal,res,quesadilla_tinga_res,1
+Quesadilla de Jamón con Espinacas,entrada_comal,none,quesadilla_jamon_espinaca,1
+Quesadilla Choripapa,entrada_comal,cerdo,quesadilla_choripapa,1
+Volcán de Queso con Champiñón,entrada_comal,none,volcan_queso_champinon,1
+Volcán de Chorizo,entrada_comal,cerdo,volcan_chorizo,1
+Molletes,entrada_comal,none,molletes,1
+Picaditas de Papa,entrada_comal,none,picaditas_papa,1
+Tetelas de Queso,entrada_comal,none,tetelas_queso,1
+Dobladita de Chicharrón con Queso,entrada_comal,cerdo,dobladita_chicharron_queso,1
+Dobladita de Quesillo con Epazote,entrada_comal,none,dobladita_quesillo_epazote,1
+
+Aros de Cebolla,entrada_no_comal,none,aros_cebolla,1
+Aros de Calamar,entrada_no_comal,pescado,aros_calamar,1
+Dedos de Queso,entrada_no_comal,none,dedos_queso,1
+Alitas BBQ,entrada_no_comal,pollo,alitas_bbq,1
+Alitas Agridulce,entrada_no_comal,pollo,alitas_agridulce,1
+Alitas Picantes,entrada_no_comal,pollo,alitas_picantes,1
+Alitas al Limón,entrada_no_comal,pollo,alitas_limon,1
+Tostada de Tinga,entrada_no_comal,pollo,tostada_tinga,1
+Tostada de Cochinita,entrada_no_comal,cerdo,tostada_cochinita,1
+Tostada de Salpicón,entrada_no_comal,res,tostada_salpicón,1
+Tostada de Surimi,entrada_no_comal,pescado,tostada_surimi,1
+Tostada de Pulpo,entrada_no_comal,pescado,tostada_pulpo,1
+Tostada de Ceviche,entrada_no_comal,pescado,tostada_ceviche,1
+Tostada de Picadillo,entrada_no_comal,res,tostada_picadillo,1
+Ceviche de Camarón con Tosta,entrada_no_comal,camaron,ceviche_camaron,1
+Ceviche Peruano,entrada_no_comal,pescado,ceviche_peruano,1
+Ostiones Rockefeller,entrada_no_comal,pescado,ostiones_rockefeller,1
+Mejillones al Vapor,entrada_no_comal,pescado,mejillones_vapor,1
+Mejillones a la Marinera,entrada_no_comal,pescado,mejillones_marinera,1
+Mejillones a la Crema,entrada_no_comal,pescado,mejillones_crema,1
+Mejillones a la Vinagreta,entrada_no_comal,pescado,mejillones_vinagreta,1
+Calamares Fritos,entrada_no_comal,pescado,calamares_fritos,1
+Calamares a la Romana,entrada_no_comal,pescado,calamares_romana,1
+Tempura de Verduras,entrada_no_comal,none,tempura_verduras,1
+Rollitos Primavera,entrada_no_comal,none,rollitos_primavera,1
+Hojaldre de Jamón y Queso,entrada_no_comal,none,hojaldre_jamon_queso,1
+Hojaldre de Pollo con Mole,entrada_no_comal,pollo,hojaldre_pollo_mole,1
+Empanada de Queso,entrada_no_comal,none,empanada_queso,1
+Empanada de Carne,entrada_no_comal,res,empanada_carne,1
+Empanada de Jamón con Queso,entrada_no_comal,none,empanada_jamon_queso,1
+Empanada de Papa con Queso,entrada_no_comal,none,empanada_papa_queso,1
+Empanadas Argentinas,entrada_no_comal,none,empanadas_argentinas,1
+Montadito de Atún a la Vizcaína,entrada_no_comal,pescado,montadito_atun_vizcaina,1
+Montadito de Rajas,entrada_no_comal,none,montadito_rajas,1
+Montadito de Mole,entrada_no_comal,none,montadito_mole,1
+Montadito de Champiñones con Espinaca y Queso,entrada_no_comal,none,montadito_champinon_espinaca_queso,1
+Kushiage de Plátano y Queso,entrada_no_comal,none,kushiage_platano_queso,1
+Tipetito de Arrachera,fuerte,res,tipetito_de_arrachera,1
+Tacos Norteño,fuerte,res,tacos_norteno,1
+Taco de Chuleta con Nopales,fuerte,cerdo,taco_de_chuleta_con_nopales,1
+Galleta de Atun,entrada_no_comal,none,galleta_de_atun,1
+Gordita,entrada_no_comal,none,gordita,1
+Galleta o Mini Tostada de Ensalada de Surimi,entrada_no_comal,none,galleta_mini_tostada_ensalada_surimi,1
+Tlacoyo,entrada_no_comal,none,tlacoyo,1
+Chilpachole de Jaiba,sopa,pescado,chilpachole_de_jaiba,1
+Caldo de Camaron,sopa,camaron,caldo_de_camaron,1
+Pozole de Cerdo,sopa,cerdo,pozole_de_cerdo,1
+Albondigas al Chipotle,fuerte,res,albondigas_al_chipotle,1
+Manitas de Cerdo al Pibil,complemento,cerdo,manitas_de_cerdo_al_pibil,1
+Rockefeller,fuerte,pescado,rockefeller,1
+Salsa Cremosa e Chipotle,fuerte,pescado,salsa_cremosa_e_chipotle,1
+Empanizado con Ensalada,fuerte,pescado,empanizado_con_ensalada,1
+Salsa Cremosa de Champiñon,fuerte,pescado,salsa_cremosa_de_champinon,1
+Empanizado Gratinado,fuerte,pescado,empanizado_gratinado,1

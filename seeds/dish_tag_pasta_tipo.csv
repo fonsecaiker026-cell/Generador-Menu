@@ -1,0 +1,81 @@
+dish_name,tag
+Fideo Seco,pasta_tipo_fideo
+Fideo con Espinaca,pasta_tipo_fideo
+Fideo Seco con Chipotle,pasta_tipo_fideo
+Fideo Seco con Guajillo,pasta_tipo_fideo
+Fideo Seco a los 4 Chiles,pasta_tipo_fideo
+
+Codito Frío,pasta_tipo_codito
+Codito Hawaiano,pasta_tipo_codito
+Codito con Espinaca,pasta_tipo_codito
+Codito con Crema al Chipotle,pasta_tipo_codito
+Pasta de Coditos con Verduras,pasta_tipo_codito
+
+Fusilli Tricolor (Verduras y Vino Blanco),pasta_tipo_fusilli
+Fusilli con Atún,pasta_tipo_fusilli
+Fusilli al Chipotle,pasta_tipo_fusilli
+
+Fettuccini al Chipotle,pasta_tipo_fettuccini
+Fettuccini de Espinaca,pasta_tipo_fettuccini
+Fettuccini Pomodoro,pasta_tipo_fettuccini
+Fettuccini en Salsa Blanca con Camarones,pasta_tipo_fettuccini
+Fettuccini Cremoso con Tomate y Albahaca,pasta_tipo_fettuccini
+Fettuccini al Ajo y Aceite de Oliva,pasta_tipo_fettuccini
+Fettuccini al Tomate Rostizado con Tocino,pasta_tipo_fettuccini
+
+Espagueti a la Boloñesa,pasta_tipo_espagueti
+Espagueti Rojo,pasta_tipo_espagueti
+Espagueti Verde,pasta_tipo_espagueti
+Espagueti Verde con Elote,pasta_tipo_espagueti
+Espagueti con Elote,pasta_tipo_espagueti
+Espagueti Carbonara,pasta_tipo_espagueti
+Espagueti al Mojo,pasta_tipo_espagueti
+Espagueti a los 3 Quesos,pasta_tipo_espagueti
+Espagueti al Ajo y 3 Quesos,pasta_tipo_espagueti
+Espagueti al Pesto,pasta_tipo_espagueti
+Espagueti a la Jardinera,pasta_tipo_espagueti
+Espagueti con Verduras,pasta_tipo_espagueti
+Espagueti con Mejillones,pasta_tipo_espagueti
+Espagueti con Camarones al Vino Blanco,pasta_tipo_espagueti
+Espagueti con Piña,pasta_tipo_espagueti
+Espagueti al Limón,pasta_tipo_espagueti
+Espagueti en Salsa de Tomate y Espinaca,pasta_tipo_espagueti
+Espagueti en Salsa de Brócoli,pasta_tipo_espagueti
+Espagueti en Salsa Cremosa de Espinaca al Curry,pasta_tipo_espagueti
+Espagueti con Atún,pasta_tipo_espagueti
+Espagueti con Pollo y Champiñones,pasta_tipo_espagueti
+Espagueti a la Mantequilla,pasta_tipo_espagueti
+Espagueti a la Mexicana,pasta_tipo_espagueti
+Espagueti Marinara,pasta_tipo_espagueti
+Espagueti al Vino Blanco con Tocino y Champiñones,pasta_tipo_espagueti
+
+Pasta Perejil,pasta_tipo_pasta
+Pasta Arrabbiata,pasta_tipo_pasta
+Pasta Italiana,pasta_tipo_pasta
+Pasta con Atún,pasta_tipo_pasta
+Ensalada Italiana de Pasta,pasta_tipo_pasta
+Pasta Fría con Jamón,pasta_tipo_pasta
+Pasta Fría con Jalapeño,pasta_tipo_pasta
+Ensalada Rusa con Pasta,pasta_tipo_pasta
+Pasta Fría con Lechuga y Aderezo César,pasta_tipo_pasta
+Pasta Pluma con Salchicha,pasta_tipo_pluma
+Pasta de Tres Quesos,pasta_tipo_pasta
+Pasta con Crema de Espinaca,pasta_tipo_pasta
+Pasta Cremosa con Atún,pasta_tipo_pasta
+Pasta al Horno con Guajillo y Queso,pasta_tipo_pasta
+Pasta con Setas,pasta_tipo_pasta
+Surimi con Pasta y Mandarina,pasta_tipo_pasta
+Pasta con Salsa de Pimiento Morrón,pasta_tipo_pasta
+Pasta con Almejas,pasta_tipo_pasta
+Pomodoro,pasta_tipo_pasta
+Alfredo,pasta_tipo_pasta
+Pasta Alfredo con Camarones,pasta_tipo_pasta
+Alfredo con Albóndigas y Albahaca,pasta_tipo_pasta
+Pasta con Champiñones y Cebolla Caramelizada,pasta_tipo_pasta
+Pasta con Chorizo y Chipotle,pasta_tipo_pasta
+
+Florentina,pasta_tipo_pasta
+
+Espagueti Chino,pasta_tipo_espagueti
+Macarrones con Espinaca Gratinados,pasta_tipo_macarron
+Tallarines con Verduras Salteadas,pasta_tipo_tallarines
