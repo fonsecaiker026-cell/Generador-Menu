@@ -14,6 +14,9 @@ import tempfile
 from contextlib import asynccontextmanager
 from datetime import date, datetime, timedelta
 from typing import Any, Optional
+from pathlib import Path
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 if PROJECT_ROOT not in sys.path:
@@ -71,6 +74,17 @@ app = FastAPI(
     version="1.0.0",
     lifespan=lifespan,
 )
+BASE_DIR = Path(__file__).resolve().parent
+FRONTEND_DIST = BASE_DIR / "frontend" / "dist"
+
+if FRONTEND_DIST.exists():
+    assets_dir = FRONTEND_DIST / "assets"
+    if assets_dir.exists():
+        app.mount("/assets", StaticFiles(directory=assets_dir), name="assets")
+
+    @app.get("/", include_in_schema=False)
+    async def serve_root():
+        return FileResponse(FRONTEND_DIST / "index.html")
 
 app.add_middleware(
     CORSMiddleware,
@@ -805,3 +819,15 @@ def health():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("api_server:app", host="0.0.0.0", port=8000, reload=True)
+
+if FRONTEND_DIST.exists():
+    @app.get("/{full_path:path}", include_in_schema=False)
+    async def serve_frontend(full_path: str):
+        if full_path.startswith("api") or full_path in {"docs", "redoc", "openapi.json"}:
+            raise HTTPException(status_code=404, detail="Not found")
+
+        requested = FRONTEND_DIST / full_path
+        if full_path and requested.exists() and requested.is_file():
+            return FileResponse(requested)
+
+        return FileResponse(FRONTEND_DIST / "index.html")
