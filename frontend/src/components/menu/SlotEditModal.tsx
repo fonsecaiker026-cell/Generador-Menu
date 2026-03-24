@@ -1,5 +1,5 @@
-﻿import { useState, useEffect, useRef } from 'react'
-import { Search, X, Pin, Trash2, Save, Star } from 'lucide-react'
+import { useState, useEffect, useRef } from 'react'
+import { Search, X, Pin, Trash2, Save, Star, AlertTriangle } from 'lucide-react'
 import { Modal } from '../ui/Modal'
 import { Button } from '../ui/Button'
 import { Badge } from '../ui/Badge'
@@ -7,6 +7,13 @@ import type { MenuRow, Dish } from '../../types'
 import { SLOT_LABELS, PROTEIN_LABELS, PROTEIN_DOT, FIXED_SLOTS, COURSE_GROUP_LABELS } from './constants'
 import { fetchDishesBySlot } from '../../api/dishes'
 import { clsx } from 'clsx'
+
+const DAY_NAMES_ES: Record<number, string> = { 0: 'Dom', 1: 'Lun', 2: 'Mar', 3: 'Mié', 4: 'Jue', 5: 'Vie', 6: 'Sáb' }
+
+function getDayName(dateStr: string): string {
+  const [y, m, d] = dateStr.split('-').map(Number)
+  return DAY_NAMES_ES[new Date(y, m - 1, d).getDay()] ?? dateStr
+}
 
 function priorityTagForDate(menuDate: string, slot?: string): string | null {
   if (slot === 'enchiladas') return null
@@ -56,19 +63,30 @@ function formatLastUsed(last_used: string | null | undefined): { label: string; 
 function formatCourseGroupLabel(courseGroup: string): string {
   return COURSE_GROUP_LABELS[courseGroup] ?? courseGroup.replace(/_/g, ' ')
 }
+
 export function SlotEditModal({ row, weekStart, weekRows, onClose, onApply, onRemoveOverride }: SlotEditModalProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [allDishes, setAllDishes] = useState<Dish[]>([])
+  const [takenDishes, setTakenDishes] = useState<Dish[]>([]) // dishes already in week (other slot)
   const [slotDishes, setSlotDishes] = useState<Dish[]>([]) // all slot dishes incl. taken (for last_used lookup)
   const [filtered, setFiltered] = useState<Dish[]>([])
+  const [filteredTaken, setFilteredTaken] = useState<Dish[]>([])
   const [selectedDish, setSelectedDish] = useState<Dish | null>(null)
   const [applying, setApplying] = useState(false)
   const [removing, setRemoving] = useState(false)
   const [loading, setLoading] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
 
-  // Dish IDs already used anywhere in this week (including current slot)
-  const takenIds = new Set(weekRows.map((r) => r.dish_id))
+  // Build map: dish_id → [{menu_date, slot}] for dishes used in OTHER slots this week
+  const takenUsageMap = new Map<number, Array<{ menu_date: string; slot: string }>>()
+  if (row) {
+    weekRows.forEach((r) => {
+      if (r.menu_date !== row.menu_date || r.slot !== row.slot) {
+        if (!takenUsageMap.has(r.dish_id)) takenUsageMap.set(r.dish_id, [])
+        takenUsageMap.get(r.dish_id)!.push({ menu_date: r.menu_date, slot: r.slot })
+      }
+    })
+  }
 
   const priorityTag = row ? priorityTagForDate(row.menu_date, row.slot) : null
 
@@ -79,39 +97,51 @@ export function SlotEditModal({ row, weekStart, weekRows, onClose, onApply, onRe
     setSelectedDish(null)
     fetchDishesBySlot(row.slot, row.menu_date, row.menu_date, row.slot).then((dishes) => {
       setSlotDishes(dishes)
-      // Exclude dishes already used in the current week (including current dish)
-      const available = dishes.filter((d) => !takenIds.has(d.id))
-      // Sort: priority dishes for this day first (only_fri on Fri, only_sat on Sat)
+
+      // Separate: available (not in week) vs taken (in week, different slot)
+      // Exclude current dish from both (shown separately as "platillo actual")
+      const available: Dish[] = []
+      const taken: Dish[] = []
+      dishes.forEach((d) => {
+        if (d.id === row.dish_id) return // current dish — shown in "platillo actual"
+        if (takenUsageMap.has(d.id)) {
+          taken.push(d)
+        } else {
+          available.push(d)
+        }
+      })
+
+      // Sort available: priority dishes for this day first
       const tag = priorityTagForDate(row.menu_date, row.slot)
       if (tag) {
         available.sort((a, b) => {
           const pa = isDishPriority(a, tag) ? 0 : 1
           const pb = isDishPriority(b, tag) ? 0 : 1
           return pa - pb
-          // within each group the API order (last_used oldest-first) is preserved
         })
       }
+
       setAllDishes(available)
+      setTakenDishes(taken)
       setLoading(false)
     })
     setTimeout(() => inputRef.current?.focus(), 100)
   }, [row, weekRows])
 
   useEffect(() => {
-    if (!searchQuery.trim()) {
+    const q = searchQuery.trim().toLowerCase()
+    if (!q) {
       setFiltered(allDishes)
+      setFilteredTaken(takenDishes)
       return
     }
-    const q = searchQuery.toLowerCase()
-    setFiltered(
-      allDishes.filter(
-        (d) =>
-          d.name.toLowerCase().includes(q) ||
-          formatCourseGroupLabel(d.course_group).toLowerCase().includes(q) ||
-          d.protein.toLowerCase().includes(q),
-      ),
-    )
-  }, [searchQuery, allDishes])
+    const match = (d: Dish) =>
+      d.name.toLowerCase().includes(q) ||
+      formatCourseGroupLabel(d.course_group).toLowerCase().includes(q) ||
+      d.protein.toLowerCase().includes(q)
+    setFiltered(allDishes.filter(match))
+    setFilteredTaken(takenDishes.filter(match))
+  }, [searchQuery, allDishes, takenDishes])
 
   const handleApply = async () => {
     if (!row || !selectedDish) return
@@ -143,6 +173,10 @@ export function SlotEditModal({ row, weekStart, weekRows, onClose, onApply, onRe
   // Current dish - look in slotDishes (includes taken dishes) for last_used
   const currentDishData = slotDishes.find((d) => d.id === row.dish_id)
   const currentLastUsed = formatLastUsed(currentDishData?.last_used)
+
+  const selectedIsTaken = selectedDish ? takenUsageMap.has(selectedDish.id) : false
+  const totalAvailable = allDishes.length
+  const totalTaken = takenDishes.length
 
   return (
     <Modal
@@ -181,7 +215,7 @@ export function SlotEditModal({ row, weekStart, weekRows, onClose, onApply, onRe
             loading={applying}
             disabled={!selectedDish}
           >
-            Aplicar ahora
+            {selectedIsTaken ? 'Forzar de todas formas' : 'Aplicar ahora'}
           </Button>
         </>
       }
@@ -213,7 +247,9 @@ export function SlotEditModal({ row, weekStart, weekRows, onClose, onApply, onRe
           Reemplazar con
           {!loading && (
             <span className="ml-2 font-normal normal-case text-warm-400">
-              ({filtered.length}{filtered.length !== allDishes.length ? ` de ${allDishes.length}` : ''} disponibles)
+              ({filtered.length}{filtered.length !== totalAvailable ? ` de ${totalAvailable}` : ''} disponibles
+              {totalTaken > 0 && `, ${filteredTaken.length}${filteredTaken.length !== totalTaken ? ` de ${totalTaken}` : ''} ya en semana`}
+              )
             </span>
           )}
         </p>
@@ -243,23 +279,23 @@ export function SlotEditModal({ row, weekStart, weekRows, onClose, onApply, onRe
           {loading && (
             <div className="px-4 py-6 text-center text-sm text-warm-400">Cargando platillos...</div>
           )}
-          {!loading && filtered.length === 0 && (
+          {!loading && filtered.length === 0 && filteredTaken.length === 0 && (
             <div className="px-4 py-6 text-center text-sm text-warm-400">
               {searchQuery ? `Sin resultados para "${searchQuery}"` : 'No hay platillos disponibles.'}
             </div>
           )}
+
+          {/* Available dishes */}
           {!loading && (() => {
             const priorityCount = priorityTag
               ? filtered.filter(d => isDishPriority(d, priorityTag)).length
               : 0
             return filtered.map((dish, idx) => {
               const isSelected = selectedDish?.id === dish.id
-              const isCurrent = dish.id === row.dish_id
               const isPriority = isDishPriority(dish, priorityTag)
               const { label: lastUsedLabel, color: lastUsedColor } = formatLastUsed(dish.last_used)
               return (
                 <div key={dish.id}>
-                  {/* Section headers */}
                   {idx === 0 && priorityCount > 0 && (
                     <div className="px-3 py-1.5 bg-amber-50 border-b border-amber-100 flex items-center gap-1.5">
                       <Star className="w-3 h-3 text-amber-500 fill-amber-400" />
@@ -277,23 +313,13 @@ export function SlotEditModal({ row, weekStart, weekRows, onClose, onApply, onRe
                     onClick={() => setSelectedDish(isSelected ? null : dish)}
                     className={clsx(
                       'w-full flex items-center gap-3 px-3 py-2.5 text-left transition-colors border-b border-warm-100 last:border-0',
-                      isSelected
-                        ? 'bg-brand-50 border-brand-100'
-                        : isCurrent
-                        ? 'bg-warm-50'
-                        : isPriority
-                        ? 'hover:bg-amber-50'
-                        : 'hover:bg-warm-50',
+                      isSelected ? 'bg-brand-50 border-brand-100' : isPriority ? 'hover:bg-amber-50' : 'hover:bg-warm-50',
                     )}
                   >
                     <div className={clsx('w-2 h-2 rounded-full flex-shrink-0', PROTEIN_DOT[dish.protein])} />
                     <div className="flex-1 min-w-0">
-                      <p className={clsx(
-                        'text-sm leading-tight',
-                        isSelected ? 'text-brand-800 font-semibold' : isCurrent ? 'text-warm-600' : 'text-warm-800 font-medium',
-                      )}>
+                      <p className={clsx('text-sm leading-tight', isSelected ? 'text-brand-800 font-semibold' : 'text-warm-800 font-medium')}>
                         {dish.name}
-                        {isCurrent && <span className="ml-2 text-[10px] text-warm-400 font-normal">(actual)</span>}
                       </p>
                       <p className="text-[11px] text-warm-400 mt-0.5">
                         {formatCourseGroupLabel(dish.course_group)} · {PROTEIN_LABELS[dish.protein]}
@@ -303,9 +329,7 @@ export function SlotEditModal({ row, weekStart, weekRows, onClose, onApply, onRe
                       {isPriority && !isSelected && (
                         <Star className="w-3 h-3 text-amber-500 fill-amber-400 flex-shrink-0" />
                       )}
-                      <span className={clsx('text-[11px]', lastUsedColor)}>
-                        {lastUsedLabel}
-                      </span>
+                      <span className={clsx('text-[11px]', lastUsedColor)}>{lastUsedLabel}</span>
                       {isSelected && <Pin className="w-3.5 h-3.5 text-brand-600" />}
                     </div>
                   </button>
@@ -313,16 +337,77 @@ export function SlotEditModal({ row, weekStart, weekRows, onClose, onApply, onRe
               )
             })
           })()}
+
+          {/* Taken dishes section — already used in this week */}
+          {!loading && filteredTaken.length > 0 && (
+            <>
+              <div className="px-3 py-1.5 bg-amber-50 border-t border-b border-amber-200 flex items-center gap-1.5">
+                <AlertTriangle className="w-3 h-3 text-amber-600" />
+                <p className="text-[10px] font-semibold text-amber-700 uppercase tracking-wide">
+                  Ya en esta semana · el otro slot se regenerará
+                </p>
+              </div>
+              {filteredTaken.map((dish) => {
+                const isSelected = selectedDish?.id === dish.id
+                const { label: lastUsedLabel, color: lastUsedColor } = formatLastUsed(dish.last_used)
+                const usages = takenUsageMap.get(dish.id) ?? []
+                return (
+                  <button
+                    key={dish.id}
+                    onClick={() => setSelectedDish(isSelected ? null : dish)}
+                    className={clsx(
+                      'w-full flex items-center gap-3 px-3 py-2.5 text-left transition-colors border-b border-amber-100 last:border-0',
+                      isSelected ? 'bg-amber-100 border-amber-200' : 'hover:bg-amber-50',
+                    )}
+                  >
+                    <div className={clsx('w-2 h-2 rounded-full flex-shrink-0', PROTEIN_DOT[dish.protein])} />
+                    <div className="flex-1 min-w-0">
+                      <p className={clsx('text-sm leading-tight', isSelected ? 'text-amber-900 font-semibold' : 'text-warm-700 font-medium')}>
+                        {dish.name}
+                      </p>
+                      <p className="text-[11px] text-amber-600 mt-0.5">
+                        {usages.map(u => `${getDayName(u.menu_date)} · ${SLOT_LABELS[u.slot] ?? u.slot}`).join(', ')}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2 shrink-0">
+                      <span className={clsx('text-[11px]', lastUsedColor)}>{lastUsedLabel}</span>
+                      {isSelected ? <Pin className="w-3.5 h-3.5 text-amber-600" /> : <AlertTriangle className="w-3 h-3 text-amber-400" />}
+                    </div>
+                  </button>
+                )
+              })}
+            </>
+          )}
         </div>
       </div>
 
       {/* Selected preview */}
-      {selectedDish && (
+      {selectedDish && !selectedIsTaken && (
         <div className="mt-4 flex items-center gap-2 px-3 py-2 bg-brand-50 border border-brand-200 rounded-lg">
           <Pin className="w-3.5 h-3.5 text-brand-600 flex-shrink-0" />
           <p className="text-sm text-brand-800">
             <strong>{selectedDish.name}</strong> se forzará en este slot.
           </p>
+        </div>
+      )}
+
+      {/* Warning when selected dish is already in week */}
+      {selectedDish && selectedIsTaken && (
+        <div className="mt-4 flex items-start gap-2 px-3 py-2.5 bg-amber-50 border border-amber-300 rounded-lg">
+          <AlertTriangle className="w-4 h-4 text-amber-600 mt-0.5 flex-shrink-0" />
+          <div>
+            <p className="text-sm font-semibold text-amber-800">
+              {selectedDish.name} ya está esta semana
+            </p>
+            {(takenUsageMap.get(selectedDish.id) ?? []).map((u) => (
+              <p key={u.menu_date + u.slot} className="text-xs text-amber-700 mt-0.5">
+                {getDayName(u.menu_date)} · {SLOT_LABELS[u.slot] ?? u.slot}
+              </p>
+            ))}
+            <p className="text-xs text-amber-600 mt-1">
+              Si confirmas, ese slot se regenerará automáticamente con otro platillo.
+            </p>
+          </div>
         </div>
       )}
     </Modal>

@@ -789,7 +789,7 @@ def remove_override(menu_date: str, slot: str) -> None:
         conn.commit()
 
 
-def apply_override_now(menu_date: str, slot: str) -> None:
+def apply_override_now(menu_date: str, slot: str) -> list[dict]:
     """
     Aplica inmediatamente el efecto del override en la semana.
 
@@ -799,6 +799,11 @@ def apply_override_now(menu_date: str, slot: str) -> None:
     - Molcajete lunes: recalcula el dÃ­a completo
     - Ensaladas: NO se manejan aquÃ­; generator.recompute_slot() debe encargarse
       de la lÃ³gica semanal (dÃ­a ancla/dÃ­a espejo).
+    - Si el platillo forzado ya estaba en otro slot de la semana, ese slot se
+      regenera automÃ¡ticamente (el algoritmo evitarÃ¡ repetirlo).
+
+    Returns: lista de slots auto-regenerados por conflicto,
+             e.g. [{"menu_date": "2026-03-24", "slot": "fuerte_res"}]
     """
     if slot == "arroz":
         raise ValueError("El slot 'arroz' es fijo (Arroz al gusto) y no admite overrides.")
@@ -810,12 +815,45 @@ def apply_override_now(menu_date: str, slot: str) -> None:
         week_id, _w = _ensure_week_exists_and_editable(conn, week_start)
         rng = random.Random(to_yyyy_mm_dd(week_start))
 
+        # Detectar si el platillo forzado ya aparece en otro slot de esta semana
+        override_row = conn.execute(
+            "SELECT forced_dish_id FROM menu_override WHERE menu_date=? AND slot=?",
+            (to_yyyy_mm_dd(day), slot),
+        ).fetchone()
+        forced_dish_id = override_row["forced_dish_id"] if override_row else None
+
+        conflicts: list[dict] = []
+        if forced_dish_id is not None:
+            conflict_rows = conn.execute(
+                """
+                SELECT mi.menu_date, mi.slot
+                FROM menu_item mi
+                JOIN menu_week mw ON mw.id = mi.menu_week_id
+                WHERE mw.id = ?
+                  AND mi.dish_id = ?
+                  AND NOT (mi.menu_date = ? AND mi.slot = ?)
+                """,
+                (int(week_id), int(forced_dish_id), to_yyyy_mm_dd(day), slot),
+            ).fetchall()
+            conflicts = [{"menu_date": r["menu_date"], "slot": r["slot"]} for r in conflict_rows]
+
+        # Aplicar el override (recomputa el slot forzado)
         if slot == "molcajete" and day.weekday() == 0:
             recompute_day(conn, int(week_id), day, rng, exclude_week_id_for_rotation=None)
         else:
             recompute_slot(conn, int(week_id), day, slot, rng, exclude_week_id_for_rotation=None)
 
+        # Regenerar slots en conflicto (el platillo ya estÃ¡ "tomado" por el slot forzado)
+        for conflict in conflicts:
+            conflict_date = parse_yyyy_mm_dd(conflict["menu_date"])
+            recompute_slot(
+                conn, int(week_id), conflict_date, conflict["slot"],
+                rng, exclude_week_id_for_rotation=None,
+            )
+
         conn.commit()
+
+    return conflicts
 
 
 def reconcile_menu_for_catalog_change(dish_id: int) -> dict[str, Any]:

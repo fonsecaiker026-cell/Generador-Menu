@@ -230,9 +230,13 @@ export function MenuPage() {
 
   // Override: apply immediately
   const handleApplyOverride = async (menuDate: string, slot: string, forcedDishId: number) => {
-    const data = await applyOverrideNow(weekStart, menuDate, slot, forcedDishId)
-    setWeekData(data)
-    showToast('Override aplicado', 'success')
+    const { weekData, conflictsResolved } = await applyOverrideNow(weekStart, menuDate, slot, forcedDishId)
+    setWeekData(weekData)
+    if (conflictsResolved.length > 0) {
+      showToast(`Override aplicado. ${conflictsResolved.length} slot${conflictsResolved.length > 1 ? 's regenerados' : ' regenerado'} por conflicto.`, 'success')
+    } else {
+      showToast('Override aplicado', 'success')
+    }
   }
 
   // Remove override — recomputes slot immediately, no regeneration needed

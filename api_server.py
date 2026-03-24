@@ -495,10 +495,10 @@ def api_remove_override(menu_date: str, slot: str):
 def api_apply_override(menu_date: str, slot: str):
     _assert_writable_menu_date(menu_date)
     try:
-        apply_override_now(menu_date, slot)
+        conflicts = apply_override_now(menu_date, slot)
     except (ValueError, RuntimeError) as e:
         raise HTTPException(status_code=422, detail=str(e))
-    return {"ok": True}
+    return {"ok": True, "conflicts_resolved": conflicts}
 
 
 # ─── Dish endpoints ───────────────────────────────────────────

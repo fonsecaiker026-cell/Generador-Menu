@@ -200,28 +200,35 @@ export async function removeOverride(menuDate: string, slot: string, weekStart: 
   )
 }
 
+export interface ApplyOverrideResult {
+  weekData: WeekData
+  conflictsResolved: Array<{ menu_date: string; slot: string }>
+}
+
 export async function applyOverrideNow(
   weekStart: string,
   menuDate: string,
   slot: string,
   forcedDishId: number,
-): Promise<WeekData> {
+): Promise<ApplyOverrideResult> {
   const monday = ensureMonday(weekStart)
   return withFallback(
     async () => {
       // 1. Save the forced dish in the override table
       await apiClient.post('/overrides', { menu_date: menuDate, slot, forced_dish_id: forcedDishId, week_start: monday })
-      // 2. Apply it immediately (recompute slot using the override)
-      await apiClient.post(`/overrides/${menuDate}/${slot}/apply?week_start=${monday}`)
+      // 2. Apply it immediately (recompute slot + auto-regenerate conflicts)
+      const { data: applyData } = await apiClient.post<{ ok: boolean; conflicts_resolved: Array<{ menu_date: string; slot: string }> }>(
+        `/overrides/${menuDate}/${slot}/apply?week_start=${monday}`,
+      )
       // 3. Fetch updated week
-      const { data } = await apiClient.get<WeekData>(`/weeks/${monday}`)
-      return data
+      const { data: weekData } = await apiClient.get<WeekData>(`/weeks/${monday}`)
+      return { weekData, conflictsResolved: applyData.conflicts_resolved ?? [] }
     },
     async () => {
       await delay(400)
       const current = getMockWeek(monday)
       const dish = MOCK_DISHES.find((d) => d.id === forcedDishId)
-      if (!dish) return current
+      if (!dish) return { weekData: current, conflictsResolved: [] }
 
       const updatedRows = current.rows.map((r) => {
         if (r.menu_date === menuDate && r.slot === slot) {
@@ -238,7 +245,7 @@ export async function applyOverrideNow(
       })
       const updated = { ...current, rows: updatedRows }
       setMockWeek(monday, updated)
-      return updated
+      return { weekData: updated, conflictsResolved: [] }
     },
   )
 }
