@@ -22,7 +22,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
@@ -422,13 +422,14 @@ def api_catalog_health(
 # ─── Export endpoints ─────────────────────────────────────────
 
 @app.get("/api/weeks/{week_start}/pdf")
-def api_export_pdf(week_start: str):
+def api_export_pdf(week_start: str, background_tasks: BackgroundTasks):
     try:
         tmp = tempfile.NamedTemporaryFile(
             suffix=".pdf", prefix=f"menu_{week_start}_", delete=False
         )
         tmp.close()
         out = export_week_pdf(week_start, tmp.name)
+        background_tasks.add_task(os.unlink, out)
         return FileResponse(
             path=out,
             media_type="application/pdf",
@@ -439,13 +440,14 @@ def api_export_pdf(week_start: str):
 
 
 @app.get("/api/weeks/{week_start}/csv")
-def api_export_csv(week_start: str):
+def api_export_csv(week_start: str, background_tasks: BackgroundTasks):
     try:
         tmp = tempfile.NamedTemporaryFile(
             suffix=".csv", prefix=f"menu_{week_start}_", delete=False
         )
         tmp.close()
         out = export_week_csv(week_start, tmp.name)
+        background_tasks.add_task(os.unlink, out)
         return FileResponse(
             path=out,
             media_type="text/csv",
