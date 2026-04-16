@@ -15,7 +15,7 @@ export const SLOT_LABELS: Record<string, string> = {
   fuerte_cerdo: 'Cerdo',
   fuerte_pescado: 'Pescado',
   fuerte_camaron: 'Camarón',
-  chamorro: 'Chamorro',
+  chamorro: 'Chamorro al horno pibil o al albañil',
   complemento: 'Complemento',
   pancita: 'Pancita',
   paella: 'Paella',
@@ -74,21 +74,21 @@ export const FIXED_SLOTS = new Set([
 
 // Slots per section
 export const SECTION_SLOTS = {
-  Entradas: ['entrada_comal', 'entrada_no_comal'],
+  Entradas: ['entrada_no_comal', 'entrada_comal'],
   'Sopas & Cremas': ['sopa', 'crema', 'pasta', 'pancita', 'sopa_pollo'],
   'Arroz & Ensalada': ['arroz', 'ensalada_A', 'ensalada_B', 'ensalada_C'],
   'Platos Fuertes': [
+    'chamorro',
+    'paella',
     'molcajete',
     'fuerte_res',
     'fuerte_pollo',
     'fuerte_cerdo',
     'fuerte_pescado',
     'fuerte_camaron',
-    'chamorro',
   ],
   'Especiales & Complementos': [
     'complemento',
-    'paella',
     'pescado_al_gusto',
     'camaron_al_gusto',
     'nuggets',

@@ -983,8 +983,8 @@ SECTION_ORDER = [
 ]
 
 SLOT_ORDER = [
-    "entrada_comal",
     "entrada_no_comal",
+    "entrada_comal",
     "pancita",
     "sopa",
     "sopa_pollo",
@@ -994,15 +994,15 @@ SLOT_ORDER = [
     "ensalada_A",
     "ensalada_B",
     "ensalada_C",
+    "chamorro",
+    "paella",
     "molcajete",
     "fuerte_res",
     "fuerte_pollo",
     "fuerte_cerdo",
-    "chamorro",
     "fuerte_pescado",
     "fuerte_camaron",
     "complemento",
-    "paella",
     "pescado_al_gusto",
     "camaron_al_gusto",
     "nuggets",
@@ -1129,10 +1129,11 @@ def export_week_pdf(week_start_date: str, out_path: str | Path) -> str:
 
             import re as _re
             for rr in sec_rows:
-                if rr.slot == "nuggets":
+                if rr.slot == "chamorro":
+                    dish_txt = "Chamorro al horno pibil o al albañil"
+                elif rr.slot == "nuggets":
                     dish_txt = "Nuggets de pollo con papas"
                 elif rr.slot in ("pancita", "paella"):
-                    # Strip any parenthetical suffix — show only the base name
                     dish_txt = _re.sub(r"\s*\([^)]*\)", "", rr.dish_name).strip()
                 else:
                     dish_txt = rr.dish_name
