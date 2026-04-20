@@ -27,6 +27,8 @@ export function SlotCard({ row, onEdit, isFinalized }: SlotCardProps) {
       ? 'Pancita de res en caldo'
       : row.slot === 'paella'
       ? 'Paella'
+      : row.slot === 'chamorro'
+      ? 'Chamorro al horno pibil o al albañil'
       : row.dish_name
 
   return (

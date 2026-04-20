@@ -15,7 +15,7 @@ export const SLOT_LABELS: Record<string, string> = {
   fuerte_cerdo: 'Cerdo',
   fuerte_pescado: 'Pescado',
   fuerte_camaron: 'Camarón',
-  chamorro: 'Chamorro al horno pibil o al albañil',
+  chamorro: 'Chamorro',
   complemento: 'Complemento',
   pancita: 'Pancita',
   paella: 'Paella',
